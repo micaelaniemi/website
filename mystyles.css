@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/*
+my style sheet
+*/
+legend {
+    font-weight: bold;
+    font-family: Georgia, Times, serif;
+}
+
+input[type=checkbox] {
+    margin-left: 25px;
+}
+
+.floatright {
+    float: right;
+    margin-left: 30px;
+}
+
+.center {
+    display: block;
+    margin-left: 395px;
+    margin-right: auto;
+}
+
+header {
+    height: 150px;
+}
+
+#main {
+    margin-left: 250px;
+    color: ghostwhite;
+}
+
+body {
+    background-image: url('grayblk.png');
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0 5%;
+    font-family: Verdana, Arial, sans-serif;
+    position: relative;
+}
+
+.nob {
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+h1 {
+    color: ghostwhite;
+    font-size: 36px;
+    line-height: 52px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-family: Georgia, Times, serif;
+}
+
+h2 {
+    margin-top: 30px;
+    font-family: Georgia, Times, serif;
+}
+
+/* these are for body links */
+/* unvisited links */
+a:link {
+    color: #C6BA8B;
+}
+
+/* hovering over a link */
+a:hover,
+a:active {
+    background: #fff7bd;
+    color: darkcyan;
+}
+
+/* visited links */
+a:visited {
+    color: aqua;
+    background: gray;
+}
+
+/* these are for navigation spacing */
+nav {
+    width: 250px;
+    float: left;
+    height: 750px;
+    margin-top: 15px;
+    color: ghostwhite;
+}
+
+/* these are for navigation links */
+nav a:link,
+nav a:visited {
+    color: #65a982;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:active {
+    background: red;
+    color: orange;
+}
+
+fieldset {
+    background-color: #262938;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 65%;
+    color: lightsteelblue;
+}
+
+/* Back to Top button */
+#backToTop {
+    display: inline;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 152, 241, 0.65);
+    color: ghostwhite;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: rgba(34, 255, 82, 0.65);
+    opacity: 1;
+}
+
+#backToTop.show {
+    display: block;
+}
