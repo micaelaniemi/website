@@ -139,3 +139,21 @@ footer {
 #backToTop.show {
     display: block;
 }
+
+#calendar {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.fc-daygrid-day-number {
+    color: #000;
+}
+.fc-event {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    font-size: 0.9em;
+    padding: 2px;
+}
