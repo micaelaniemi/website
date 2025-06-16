@@ -141,19 +141,36 @@ footer {
 }
 
 #calendar {
-    max-width: 900px;
+    max-width: 600px;
     margin: 20px auto;
-    padding: 10px;
+    padding: 8px;
     background-color: #fff;
     border-radius: 5px;
+    font-size: 0.9em;
+    box-sizing: border-box;
 }
 .fc-daygrid-day-number {
     color: #000;
+    font-size: 0.85em;
 }
 .fc-event {
     background-color: #28a745;
     color: #fff;
     border: none;
-    font-size: 0.9em;
-    padding: 2px;
+    font-size: 0.8em;
+    padding: 1px 2px;
+    line-height: 1.2;
+}
+@media (max-width: 650px) {
+    #calendar {
+        max-width: 90vw;
+        font-size: 0.8em;
+    }
+    .fc-daygrid-day-number {
+        font-size: 0.75em;
+    }
+    .fc-event {
+        font-size: 0.7em;
+        padding: 1px;
+    }
 }
