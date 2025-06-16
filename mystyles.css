@@ -83,6 +83,7 @@ a:visited {
 
 /* these are for navigation spacing */
 nav {
+    display: inline;
     width: 250px;
     float: left;
     height: 750px;
