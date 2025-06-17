@@ -168,11 +168,10 @@ footer {
 }
 
 /* Reduce arrow button size */
-.fc-prev-button,
-.fc-next-button {
+.fc-prev-button, .fc-next-button {
   padding: 6px; /* Smaller padding for compact buttons */
   font-size: 0.6em; /* Smaller icon/text size */
-  width: 28px; /* Adjust width */
+  width: 80px; /* Adjust width */
   height: 20px; /* Adjust height */
   line-height: 1; /* Center icon vertically */
 }
