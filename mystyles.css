@@ -148,7 +148,7 @@ footer {
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
-    font-size: 0.85em;  /* Scales down all text proportionally */
+    font-size: 0.65em;  /* Scales down all text proportionally */
   
 }
 .fc-daygrid-day-number {
