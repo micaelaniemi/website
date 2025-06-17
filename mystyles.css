@@ -172,7 +172,7 @@ footer {
 .fc-next-button {
   padding: 6px; /* Smaller padding for compact buttons */
   font-size: 0.6em; /* Smaller icon/text size */
-  width: 20px; /* Adjust width */
+  width: 28px; /* Adjust width */
   height: 20px; /* Adjust height */
   line-height: 1; /* Center icon vertically */
 }
