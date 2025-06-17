@@ -140,13 +140,15 @@ footer {
     display: block;
 }
 
+/* all styles below belong to modifying the FullCalendar */
+
 #calendar {
     max-width: 300px;
     margin: 20px auto;
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
-    font-size: 0.85em; /* Scales down all text proportionally */
+    font-size: 0.85em;  /* Scales down all text proportionally */
   
 }
 .fc-daygrid-day-number {
@@ -158,4 +160,19 @@ footer {
     border: none;
     font-size: 0.3em;
     padding: 0px;
+}
+
+/* Reduce calendar title (month and year) font size */
+.fc-toolbar-title {
+  font-size: 1.2em; /* Adjust this value (e.g., 1em for smaller, 1.5em for larger) */
+}
+
+/* Reduce arrow button size */
+.fc-prev-button,
+.fc-next-button {
+  padding: 5px; /* Smaller padding for compact buttons */
+  font-size: 0.8em; /* Smaller icon/text size */
+  width: 30px; /* Adjust width */
+  height: 30px; /* Adjust height */
+  line-height: 1; /* Center icon vertically */
 }
