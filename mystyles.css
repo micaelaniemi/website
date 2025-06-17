@@ -94,7 +94,7 @@ nav {
 nav a:link,
 nav a:visited {
     color: #65a982;
-    margin-right: 15px;
+    margin-right: 10px;
     text-decoration: none;
 }
 
@@ -152,9 +152,9 @@ footer {
     color: #000;
 }
 .fc-event {
-    background-color: #28a745;
+    background-color: #4682B4;
     color: #fff;
     border: none;
-    font-size: 0.9em;
-    padding: 2px;
+    font-size: 0.6em;
+    padding: 0px;
 }
