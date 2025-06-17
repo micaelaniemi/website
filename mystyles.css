@@ -164,7 +164,7 @@ footer {
 
 /* Reduce calendar title (month and year) font size */
 .fc-toolbar-title {
-  font-size: .9em; /* Adjust this value (e.g., 1em for smaller, 1.5em for larger) */
+  font-size: .5em; /* Adjust this value (e.g., 1em for smaller, 1.5em for larger) */
 }
 
 /* Reduce arrow button size */
