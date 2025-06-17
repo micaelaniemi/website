@@ -148,11 +148,11 @@ footer {
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
-  /*  font-size: 0.45em;  /* Scales down all text proportionally */ */
+    font-size: 0.45em;  /* Scales down all text proportionally */
     
   /* Optional: Adjust calendar container for better alignment */
 .fc {
-  font-size: 0.9em; /* Slightly scale down all calendar text for consistency */
+  font-size: 0.6.5em; /* Slightly scale down all calendar text for consistency */
 }
 }
 .fc-daygrid-day-number {
@@ -175,7 +175,7 @@ footer {
 .fc-prev-button, .fc-next-button {
   padding: 1px; /* Smaller padding for compact buttons */
   font-size: 0.6em; /* Smaller icon/text size */
-  width: 80px; /* Adjust width */
-  height: 40px; /* Adjust height */
-  line-height: 1; /* Center icon vertically */
+  width: 40px; /* Adjust width */
+  height: 20px; /* Adjust height */
+  line-height: 1.5; /* Center icon vertically */
 }
