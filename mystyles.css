@@ -48,6 +48,10 @@ body {
     margin-left: -60px;
 }
 
+.indented-list {
+        margin-left: 20px;
+}
+
 h1 {
     color: ghostwhite;
     font-size: 36px;
