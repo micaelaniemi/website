@@ -149,7 +149,11 @@ footer {
     background-color: #fff;
     border-radius: 10px;
   /*  font-size: 0.45em;  /* Scales down all text proportionally */ */
-  
+    
+  /* Optional: Adjust calendar container for better alignment */
+.fc {
+  font-size: 0.9em; /* Slightly scale down all calendar text for consistency */
+}
 }
 .fc-daygrid-day-number {
     color: #000;
@@ -169,7 +173,7 @@ footer {
 
 /* Reduce arrow button size */
 .fc-prev-button, .fc-next-button {
-  padding: 4px; /* Smaller padding for compact buttons */
+  padding: 1px; /* Smaller padding for compact buttons */
   font-size: 0.6em; /* Smaller icon/text size */
   width: 80px; /* Adjust width */
   height: 40px; /* Adjust height */
