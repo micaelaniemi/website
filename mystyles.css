@@ -148,7 +148,7 @@ footer {
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
-    font-size: 0.65em;  /* Scales down all text proportionally */
+  /*  font-size: 0.45em;  /* Scales down all text proportionally */ */
   
 }
 .fc-daygrid-day-number {
@@ -164,14 +164,14 @@ footer {
 
 /* Reduce calendar title (month and year) font size */
 .fc-toolbar-title {
-  font-size: .5em; /* Adjust this value (e.g., 1em for smaller, 1.5em for larger) */
+  font-size: .3em; /* Adjust this value (e.g., 1em for smaller, 1.5em for larger) */
 }
 
 /* Reduce arrow button size */
 .fc-prev-button, .fc-next-button {
-  padding: 6px; /* Smaller padding for compact buttons */
+  padding: 4px; /* Smaller padding for compact buttons */
   font-size: 0.6em; /* Smaller icon/text size */
   width: 80px; /* Adjust width */
-  height: 20px; /* Adjust height */
+  height: 40px; /* Adjust height */
   line-height: 1; /* Center icon vertically */
 }
