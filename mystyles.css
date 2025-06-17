@@ -144,11 +144,11 @@ footer {
 }
 
 #calendar {
-    max-width: 500px;
+    max-width: 650px;
     margin: 20px auto;
     padding: 10px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
   
 }
 .fc-daygrid-day-number {
