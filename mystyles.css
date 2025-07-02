@@ -189,13 +189,15 @@ footer {
 /* THM dynamic Badge */
 
 .badge-container {
-    margin-right: 150px;
+    margin: auto;
+    margin-left: -20px; 
     margin-bottom: 30px;
 }
 .badge-container iframe {
-    width: 315px;
-    height: 100px;
-    transform: scale(0.9);
-    transform-origin: left bottom;
+    width: 350px;
+    height: 150px;
+    transform: scale(0.8);
+    transform-origin: left;
     border: none;
 }
+
