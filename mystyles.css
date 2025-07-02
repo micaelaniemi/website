@@ -144,6 +144,23 @@ footer {
     display: block;
 }
 
+
+/* THM dynamic Badge */
+
+.badge-container {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.badge-container iframe {
+    width: 150px;
+    height: 75px;
+    transform: scale(0.8);
+    transform-origin: left top;
+    border: none;
+}
+
+
 /* all styles below belong to modifying the FullCalendar */
 
 #calendar {
