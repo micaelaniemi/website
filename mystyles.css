@@ -145,21 +145,6 @@ footer {
 }
 
 
-/* THM dynamic Badge */
-
-.badge-container {
-    margin: 20px auto;
-    margin-bottom: 30px;
-}
-.badge-container iframe {
-    width: 315px;
-    height: 100px;
-    transform: scale(0.9);
-    transform-origin: left top;
-    border: none;
-}
-
-
 /* all styles below belong to modifying the FullCalendar */
 
 #calendar {
@@ -198,4 +183,19 @@ footer {
   width: 40px; /* Adjust width */
   height: 20px; /* Adjust height */
   line-height: 1.5; /* Center icon vertically */
+}
+
+
+/* THM dynamic Badge */
+
+.badge-container {
+    margin: 20px auto;
+    margin-bottom: 30px;
+}
+.badge-container iframe {
+    width: 315px;
+    height: 100px;
+    transform: scale(0.9);
+    transform-origin: left top;
+    border: none;
 }
