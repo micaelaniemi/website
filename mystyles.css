@@ -189,7 +189,7 @@ footer {
 /* THM dynamic Badge */
 
 .badge-container {
-    margin-left: -60px auto;
+    margin-left: -60px;
     margin-bottom: 30px;
 }
 .badge-container iframe {
