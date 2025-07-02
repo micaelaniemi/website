@@ -148,15 +148,13 @@ footer {
 /* THM dynamic Badge */
 
 .badge-container {
-    text-align: left;
-   /* margin-left: 10px; */
     margin: 20px auto;
     margin-bottom: 30px;
 }
 .badge-container iframe {
-    width: 300px;
+    width: 315px;
     height: 100px;
-    transform: scale(0.8);
+    transform: scale(0.9);
     transform-origin: left top;
     border: none;
 }
