@@ -167,8 +167,8 @@ footer {
     background-color: #4682B4;
     color: #fff;
     border: none;
-    font-size: 0.8em;
-    padding: 2px;
+    font-size: 0.3em;
+    padding: 0px;
 }
 
 /* Reduce calendar title (month and year) font size */
