@@ -60,7 +60,7 @@
                     .then(response => response.json())
                     .then(data => {
                         const events = [];
-                        Object.keys(data).forEach(date => {
+                        Object.keys(data).sort().reverse().forEach(date => {
                             const [year] = date.split('-');
                             data[date].forEach(post => {
                                 events.push({
@@ -75,6 +75,11 @@
                             events: events,
                             eventClick: function(info) {
                                 window.location.href = info.event.url;
+                            },
+                            eventTimeFormat: {
+                                hour: 'numeric',
+                                minute: '2-digit',
+                                meridiem: 'short'
                             }
                         });
                         calendar.render();
