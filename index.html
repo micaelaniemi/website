@@ -4,35 +4,35 @@
 <head>
     <meta charset="utf-8">
     <title>MN Home</title>
-<link href="mystyles.css" type="text/css" rel="stylesheet">
+    <link href="mystyles.css" type="text/css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
 </head>
     
 <body>
     
     <header>
-     <p></p>
+        <p></p>
     </header>
     
     <nav>
         <ul class="nob">
-           <li><img class="float" src="swshlogo.jpg" height="160" alt="M Niemi's Website" /></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="advertisers.html">Advertisers</a></li>
-            <li><a href="favlinks.html">Favorite Links</a></li>
-            <li><a href="books.html">Book Links</a></li>
-            <li><a href="values.html">Informative Links</a></li>
-            <li><a href="abortion.html">Abortion</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="adventures.html">Adventures</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="donations.html">Donations</a></li>
+            <li><img class="float" src="swshlogo.jpg" height="160" alt="M Niemi's Website" /></li>
+            <li><a href="https://home.micaelaniemi.website">Home</a></li>
+            <li><a href="https://advertisers.micaelaniemi.website">Advertisers</a></li>
+            <li><a href="https://favlinks.micaelaniemi.website">Favorite Links</a></li>
+            <li><a href="https://books.micaelaniemi.website">Book Links</a></li>
+            <li><a href="https://values.micaelaniemi.website">Informative Links</a></li>
+            <li><a href="https://abortion.micaelaniemi.website">Abortion</a></li>
+            <li><a href="https://resume.micaelaniemi.website">Resume</a></li>
+            <li><a href="https://adventures.micaelaniemi.website">Adventures</a></li>
+            <li><a href="https://feedback.micaelaniemi.website">Feedback</a></li>
+            <li><a href="https://donations.micaelaniemi.website">Donations</a></li>
             <li><div id="calendar"></div></li>
         </ul>
         
         <br><br>
         <div class="badge-container">
-        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937167" style="border:none;"></iframe>
+            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937167" style="border:none;"></iframe>
         </div>
         
         <div id="calendar"></div>
@@ -46,53 +46,55 @@
         <p>Never in my wildest dreams would I have ever thought, nor cared to think, that there was a God who cared about the affairs of men. It was preposterous to even accept such a notion that something existed and co-inhabited every human sphere. How could such an entity exist and to what extent, if true, could it impose its will on us? How could such an entity empathize with mere mortals if it was 'god?' An entity without breadth and width that just existed? And if this entity did exist, how could it have any human characteristics as emotions, grief, suffering, etc? If there was a 'god,' it would be impossible for it to have these types of characteristics because it needed to be higher than the evolution of a human perspective. So I reasoned, that it could not be true. If such a thing did exist, it had to be a stoic entity. After all, there was all this suffering and evil in the world - would a 'god' care? By the 5th grade, I couldn't believe in a 'god' that allowed wickedness to prosper. I found peace in reasoning that death was an utopic ending. At times, I longed for it to come and planned on ways of making it come true. The internal struggles, the striving, the sadness and grief that plagued me - what a release to be free of those burdens and cease to exist!</p>
         <p>But God had already ordained my footsteps before eternity past. He raised me up when darkness engulfed me. He lifted me upon angels wings when my foot was about to slip. He knew my heart and cradled me in His bosom as a father to his children. <img class="floatright" src="kyakingcamping.JPG" height="250" alt="me wearing an evolution sweater" style="box-shadow: 10px 10px 12px black">Never was I far from His eyes. His ways were greater than my ways and His mercies were never ending to this degenerate.</p>
         <h2>Previous outdoor adventures:</h2>
-       <p style="background-color: black; color: ghostwhite; text-align: center;">
-  Camping   |   Hiking   |   Backpacking   |   Hang Gliding   |   Outrigging   |   Sailing   |   Canyoneering   |   White Water Rafting   |   Cross-country skiing   |   Mountaineering</p>
+        <p style="background-color: black; color: ghostwhite; text-align: center;">
+            Camping   |   Hiking   |   Backpacking   |   Hang Gliding   |   Outrigging   |   Sailing   |   Canyoneering   |   White Water Rafting   |   Cross-country skiing   |   Mountaineering</p>
         <p>Although I am social, I prefer to be alone. I have done some very stupid and embarrassing things in my past, that I am sure have been captured on devices; however, I am not haunted by them because my eternity is based on the forgiveness and redemptive power of Jesus Christ.<br><br></p> 
-        <p style=text-align: center;"> I don't like chocolate, but I eat chocolate. It's an enigma.¯\_(ツ)_/¯</p>
+        <p style="text-align: center;"> I don't like chocolate, but I eat chocolate. It's an enigma.¯\_(ツ)_/¯</p>
         <footer>
             <p>Copyright Micaela Niemi, all rights reserved.</p>
         </footer>
     </div>
 
-    #scroll to top button
     <button id="backToTop" title="Back to Top">✞</button>
 
-    # full calendar
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
             if (calendarEl) {
-                fetch('/website/posts.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const events = [];
-                        Object.keys(data).sort().reverse().forEach(date => {
-                            const [year] = date.split('-');
-                            data[date].forEach(post => {
-                                events.push({
-                                    title: post.title,
-                                    start: `${date}T${post.time}`,
-                                    url: `https://micaelaniemi.github.io/blog/posts/${year}/#post-${post.id}`
-                                });
-                            });
-                        });
-                        var calendar = new FullCalendar.Calendar(calendarEl, {
-                            initialView: 'dayGridMonth',
-                            events: events,
-                            eventClick: function(info) {
-                                window.location.href = info.event.url;
-                            },
-                            eventTimeFormat: {
-                                hour: 'numeric',
-                                minute: '2-digit',
-                                meridiem: 'short'
-                            }
-                        });
-                        calendar.render();
-                    });
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    editable: false, // Prevent users from dragging/editing events
+                    selectable: false, // Prevent users from selecting to add events
+                    events: [
+                        {
+                            title: 'Faith Journey',
+                            start: '2025-09-10T09:00',
+                            url: 'https://blog.micaelaniemi.website/#post-3'
+                        },
+                        {
+                            title: 'Adventure Reflection',
+                            start: '2025-08-15T14:30',
+                            url: 'https://blog.micaelaniemi.website/#post-2'
+                        },
+                        {
+                            title: 'First Blog Post',
+                            start: '2025-08-01T10:00',
+                            url: 'https://blog.micaelaniemi.website/#post-1'
+                        }
+                    ],
+                    eventClick: function(info) {
+                        info.jsEvent.preventDefault(); // Prevent default browser behavior
+                        window.location.href = info.event.url; // Navigate to event URL
+                    },
+                    eventTimeFormat: {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                        meridiem: 'short'
+                    }
+                });
+                calendar.render();
             }
         });
     </script>
