@@ -2,4 +2,4 @@
 mniemi personal website
 
 # license
-none
+free license / open license
