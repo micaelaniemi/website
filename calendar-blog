@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MN Home</title>
+    <link href="mystyles.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
+    <style>
+        #main-calendar { 
+            max-width: 900px; 
+            margin: 20px auto; 
+        }
+        .blog-post { 
+            margin: 20px auto; 
+            max-width: 800px; 
+            padding: 15px; 
+            border-bottom: 1px solid #ccc; 
+        }
+        .blog-post h3 { 
+            margin-top: 0; 
+        }
+        .fc-event-title { 
+            font-size: 1.2em; 
+        }
+        #calendar { 
+            max-width: 200px; 
+            font-size: 0.8em; 
+        }
+        .calendar-controls {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .calendar-controls select {
+            padding: 5px;
+            margin: 0 5px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p></p>
+    </header>
+    <nav>
+        <ul class="nob">
+            <li><img class="float" src="swshlogo.jpg" height="160" alt="M Niemi's Website" /></li>
+            <li><a href="https://home.micaelaniemi.website">Home</a></li>
+            <li><a href="https://advertisers.micaelaniemi.website">Advertisers</a></li>
+            <li><a href="https://favlinks.micaelaniemi.website">Favorite Links</a></li>
+            <li><a href="https://books.micaelaniemi.website">Book Links</a></li>
+            <li><a href="https://values.micaelaniemi.website">Informative Links</a></li>
+            <li><a href="https://abortion.micaelaniemi.website">Abortion</a></li>
+            <li><a href="https://resume.micaelaniemi.website">Resume</a></li>
+            <li><a href="https://adventures.micaelaniemi.website">Adventures</a></li>
+            <li><a href="https://feedback.micaelaniemi.website">Feedback</a></li>
+            <li><a href="https://donations.micaelaniemi.website">Donations</a></li>
+            <li><div id="calendar"></div></li>
+        </ul>
+        <br><br>
+        <div class="badge-container">
+            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937167" style="border:none;"></iframe>
+        </div>
+    </nav>
+    <div class="calendar-controls">
+        <select id="month-select">
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+        </select>
+        <select id="year-select">
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+        </select>
+    </div>
+    <div id="main-calendar"></div>
+    <div id="main">
+        <h1>My Days Are Numbered</h1>
+        <div id="blog-posts">
+            <div class="blog-post" id="post-3">
+                <h3>Faith Journey - September 10, 2025</h3>
+                <p>Reflecting on my spiritual growth, I realize how faith has anchored me through life's storms. Today, I felt a deep sense of peace and purpose, trusting in God's plan.</p>
+            </div>
+            <div class="blog-post" id="post-2">
+                <h3>Adventure Reflection - August 15, 2025</h3>
+                <p>My recent hiking trip reminded me of the beauty in solitude and nature. The mountains taught me resilience and patience, lessons I carry into daily life.</p>
+            </div>
+            <div class="blog-post" id="post-1">
+                <h3>First Blog Post - August 01, 2025</h3>
+                <p>Starting this blog feels like a new chapter. I'm excited to share my thoughts, experiences, and reflections with you all.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>free license / open license</p>
+        </footer>
+    </div>
+    <button id="backToTop" title="Back to Top">✞</button>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Main Calendar
+            var mainCalendarEl = document.getElementById('main-calendar');
+            var mainCalendar;
+            if (mainCalendarEl) {
+                mainCalendar = new FullCalendar.Calendar(mainCalendarEl, {
+                    initialView: 'dayGridMonth',
+                    editable: false,
+                    selectable: false,
+                    headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'dayGridMonth,dayGridWeek'
+                    },
+                    events: [
+                        {
+                            start: '2025-09-10',
+                            url: '#post-3',
+                            emojis: ['🙏', '✨', '🌟']
+                        },
+                        {
+                            start: '2025-08-15',
+                            url: '#post-2',
+                            emojis: ['🏞️', '🥾', '🌄']
+                        },
+                        {
+                            start: '2025-08-01',
+                            url: '#post-1',
+                            emojis: ['📝', '🚀', '😊']
+                        }
+                    ],
+                    eventContent: function(arg) {
+                        return { html: arg.event.extendedProps.emojis.join(' ') };
+                    },
+                    eventClick: function(info) {
+                        info.jsEvent.preventDefault();
+                        window.location.hash = info.event.url;
+                        document.querySelector(info.event.url).scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+                mainCalendar.render();
+            }
+
+            // Nav Calendar
+            var navCalendarEl = document.getElementById('calendar');
+            var navCalendar;
+            if (navCalendarEl) {
+                navCalendar = new FullCalendar.Calendar(navCalendarEl, {
+                    initialView: 'dayGridMonth',
+                    editable: false,
+                    selectable: false,
+                    headerToolbar: {
+                        left: 'prev',
+                        center: 'title',
+                        right: 'next'
+                    },
+                    events: [
+                        {
+                            start: '2025-09-10',
+                            url: '#post-3',
+                            emojis: ['🙏', '✨', '🌟']
+                        },
+                        {
+                            start: '2025-08-15',
+                            url: '#post-2',
+                            emojis: ['🏞️', '🥾', '🌄']
+                        },
+                        {
+                            start: '2025-08-01',
+                            url: '#post-1',
+                            emojis: ['📝', '🚀', '😊']
+                        }
+                    ],
+                    eventContent: function(arg) {
+                        return { html: arg.event.extendedProps.emojis.join(' ') };
+                    },
+                    eventClick: function(info) {
+                        info.jsEvent.preventDefault();
+                        window.location.hash = info.event.url;
+                        document.querySelector(info.event.url).scrollIntoView({ behavior: 'smooth' });
+                        mainCalendar.gotoDate(info.event.start); // Sync main calendar
+                    },
+                    eventDidMount: function(info) {
+                        info.el.style.cursor = 'pointer';
+                    }
+                });
+                navCalendar.render();
+            }
+
+            // Dropdown Navigation
+            var monthSelect = document.getElementById('month-select');
+            var yearSelect = document.getElementById('year-select');
+            if (monthSelect && yearSelect && mainCalendar && navCalendar) {
+                monthSelect.addEventListener('change', updateCalendar);
+                yearSelect.addEventListener('change', updateCalendar);
+
+                function updateCalendar() {
+                    var year = yearSelect.value;
+                    var month = monthSelect.value;
+                    var date = new Date(year, month, 1);
+                    mainCalendar.gotoDate(date);
+                    navCalendar.gotoDate(date);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
