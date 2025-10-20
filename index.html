@@ -15,28 +15,32 @@
     </header>
     
     <nav>
+<body>
+
+    <nav>
         <ul class="nob">
-            <li><img class="float" src="swshlogo.jpg" height="160" alt="M Niemi's Website" /></li>
-            <li><a href="https://home.micaelaniemi.website">Home</a></li>
-            <li><a href="https://calendar-blog.micaelaniemi.website">Blog</a></li>
-            <li><a href="https://advertisers.micaelaniemi.website">Advertisers</a></li>
-            <li><a href="https://favlinks.micaelaniemi.website">Favorite Links</a></li>
-            <li><a href="https://books.micaelaniemi.website">Book Links</a></li>
-            <li><a href="https://values.micaelaniemi.website">Informative Links</a></li>
-            <li><a href="https://abortion.micaelaniemi.website">Abortion</a></li>
-            <li><a href="https://resume.micaelaniemi.website">Resume</a></li>
-            <li><a href="https://adventures.micaelaniemi.website">Adventures</a></li>
-            <li><a href="https://feedback.micaelaniemi.website">Feedback</a></li>
-            <li><a href="https://donations.micaelaniemi.website">Donations</a></li>
-            <li><div id="calendar"></div></li>
+            <li><img class="float" src="swshlogo.jpg" height="160" alt="MN Website" /></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calendar-blog.html">Blog</a></li>
+            <li><a href="advertisers.html">Advertisers</a></li>
+            <li><a href="favlinks.html">Favorite Links</a></li>
+            <li><a href="books.html">Book Links</a></li>
+            <li><a href="values.html">Informative Links</a></li>
+            <li><a href="abortion.html">Abortion</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="donations.html">Donations</a></li>
+            
         </ul>
+    </nav>
         
         <br><br>
         <div class="badge-container">
             <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937167" style="border:none;"></iframe>
         </div>
         
-        <div id="calendar"></div>
+       
         
     </nav>
     <div id="main">
@@ -52,55 +56,16 @@
         <p>Although I am social, I prefer to be alone. I have done some very stupid and embarrassing things in my past, that I am sure have been captured on devices; however, I am not haunted by them because my eternity is based on the forgiveness and redemptive power of Jesus Christ.<br><br></p> 
         <p style="text-align: center;"> I don't like chocolate, but I eat chocolate. It's an enigma.¯\_(ツ)_/¯</p>
         <footer>
-            <p>free license / open license</p>
+            <p></p>
         </footer>
     </div>
 
     <button id="backToTop" title="Back to Top">✞</button>
 
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-            if (calendarEl) {
-                var calendar = new FullCalendar.Calendar(calendarEl, {
-                    initialView: 'dayGridMonth',
-                    editable: false, // Prevent users from dragging/editing events
-                    selectable: false, // Prevent users from selecting to add events
-                    events: [
-                        {
-                            title: 'Faith Journey',
-                            start: '2025-09-10T09:00',
-                            url: 'https://calendar-blog.micaelaniemi.website/#post-3'
-                        },
-                        {
-                            title: 'Adventure Reflection',
-                            start: '2025-08-15T14:30',
-                            url: 'https://calendar-blog.micaelaniemi.website/#post-2'
-                        },
-                        {
-                            title: 'First Blog Post',
-                            start: '2025-08-01T10:00',
-                            url: 'https://calendar-blog.micaelaniemi.website/#post-1'
-                        }
-                    ],
-                    eventClick: function(info) {
-                        info.jsEvent.preventDefault(); // Prevent default browser behavior
-                        window.location.href = info.event.url; // Navigate to event URL
-                    },
-                    eventTimeFormat: {
-                        hour: 'numeric',
-                        minute: '2-digit',
-                        meridiem: 'short'
-                    }
-                });
-                calendar.render();
-            }
-        });
-    </script>
+    
 </body>
 </html>
+
 
 
 
