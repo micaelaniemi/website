@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>MN Home</title>
     <link href="mystyles.css" type="text/css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
     <style>
-        #main-calendar { 
-            max-width: 900px; 
-            margin: 20px auto; 
+        #main-calendar {
+            max-width: 900px;
+            margin: 20px auto;
         }
-        .blog-post { 
-            margin: 20px auto; 
-            max-width: 800px; 
-            padding: 15px; 
-            border-bottom: 1px solid #ccc; 
+
+        .blog-post {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
         }
-        .blog-post h3 { 
-            margin-top: 0; 
+
+        .blog-post h3 {
+            margin-top: 0;
         }
-        .fc-event-title { 
-            font-size: 1.2em; 
+
+        .fc-event-title {
+            font-size: 1.2em;
         }
-        #calendar { 
-            max-width: 200px; 
-            font-size: 0.8em; 
+
+        #calendar {
+            max-width: 200px;
+            font-size: 0.8em;
         }
+
         .calendar-controls {
             text-align: center;
             margin-bottom: 10px;
         }
+
         .calendar-controls select {
             padding: 5px;
             margin: 0 5px;
@@ -37,29 +44,30 @@
         }
     </style>
 </head>
-    
+
+
+<nav>
+    <ul class="nob">
+        <li><img class="float" src="swshlogo.jpg" height="160" alt="MN Website" /></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calendar-blog.html">Calendar Blog</a></li>
+        <li><a href="abortion.html">Abortion</a></li>
+        <li><a href="adventures.html">Adventures</a></li>
+        <li><a href="books.html">Book Links</a></li>
+        <li><a href="favlinks.html">Favorite Links</a></li>
+        <li><a href="support-others.html">Support Others</a></li>
+        <li><a href="info.html">Informative Links</a></li>
+        <li><a href="resume.html">Resume</a></li>
+
+    </ul>
+
+    <br><br>
+    <div class="badge-container">
+        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937167" style="border:none;"></iframe>
+    </div>
+</nav>
+
 <body>
-    <nav>
-        <ul class="nob">
-            <li><img class="float" src="swshlogo.jpg" height="160" alt="MN Website" /></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="calendar-blog.html">Calendar Blog</a></li>
-            <li><a href="abortion.html">Abortion</a></li>
-            <li><a href="adventures.html">Adventures</a></li>
-            <li><a href="books.html">Book Links</a></li>
-            <li><a href="favlinks.html">Favorite Links</a></li>
-            <li><a href="support-others.html">Support Others</a></li>
-            <li><a href="info.html">Informative Links</a></li>
-            <li><a href="resume.html">Resume</a></li>  
-                    
-        </ul>
-         
-        <br><br>
-        <div class="badge-container">
-            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937167" style="border:none;"></iframe>
-        </div>
-    </nav
-    
     <div class="calendar-controls">
         <select id="month-select">
             <option value="0">January</option>
@@ -134,8 +142,7 @@
                         center: 'title',
                         right: 'dayGridMonth,dayGridWeek'
                     },
-                    events: [
-                        {
+                    events: [{
                             start: '2025-09-10',
                             url: '#post-3',
                             emojis: ['🙏', '✨', '🌟']
@@ -152,12 +159,16 @@
                         }
                     ],
                     eventContent: function(arg) {
-                        return { html: arg.event.extendedProps.emojis.join(' ') };
+                        return {
+                            html: arg.event.extendedProps.emojis.join(' ')
+                        };
                     },
                     eventClick: function(info) {
                         info.jsEvent.preventDefault();
                         window.location.hash = info.event.url;
-                        document.querySelector(info.event.url).scrollIntoView({ behavior: 'smooth' });
+                        document.querySelector(info.event.url).scrollIntoView({
+                            behavior: 'smooth'
+                        });
                     }
                 });
                 mainCalendar.render();
@@ -176,8 +187,7 @@
                         center: 'title',
                         right: 'next'
                     },
-                    events: [
-                        {
+                    events: [{
                             start: '2025-09-10',
                             url: '#post-3',
                             emojis: ['🙏', '✨', '🌟']
@@ -194,12 +204,16 @@
                         }
                     ],
                     eventContent: function(arg) {
-                        return { html: arg.event.extendedProps.emojis.join(' ') };
+                        return {
+                            html: arg.event.extendedProps.emojis.join(' ')
+                        };
                     },
                     eventClick: function(info) {
                         info.jsEvent.preventDefault();
                         window.location.hash = info.event.url;
-                        document.querySelector(info.event.url).scrollIntoView({ behavior: 'smooth' });
+                        document.querySelector(info.event.url).scrollIntoView({
+                            behavior: 'smooth'
+                        });
                         mainCalendar.gotoDate(info.event.start); // Sync main calendar
                     },
                     eventDidMount: function(info) {
@@ -227,4 +241,5 @@
         });
     </script>
 </body>
+
 </html>
