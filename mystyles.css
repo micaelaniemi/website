@@ -49,7 +49,7 @@ body {
 }
 
 .indented-list {
-        margin-left: 20px;
+    margin-left: 20px;
 }
 
 h1 {
@@ -91,7 +91,7 @@ nav {
     position: fixed;
     width: 250px;
     float: left;
-    height: 750px;  
+    height: 750px;
 }
 
 /* these are for navigation links */
@@ -153,36 +153,51 @@ footer {
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
-    font-size: 0.45em;  /* Scales down all text proportionally */
-    
-  /* Optional: Adjust calendar container for better alignment */
-.fc {
-  font-size: 0.6.5em; /* Slightly scale down all calendar text for consistency */
+    font-size: 0.45em;
+    /* Scales down all text proportionally */
+
+    /* Optional: Adjust calendar container for better alignment */
+    .fc {
+        font-size: 0.6.5em;
+        /* Slightly scale down all calendar text for consistency */
+    }
 }
-}
+
+/* Change date numbers to white */
 .fc-daygrid-day-number {
-    color: #000;
+    color: ghostwhite !important;
+    /* Override default black */
 }
+
 .fc-event {
     background-color: #4682B4;
     color: #fff;
     border: none;
     font-size: 0.3em;
-    padding: 0px;
+    padding: 0;
 }
 
 /* Reduce calendar title (month and year) font size */
 .fc-toolbar-title {
-  font-size: .3em; /* Adjust this value (e.g., 1em for smaller, 1.5em for larger) */
+    color: ghostwhite !important;
+    /* Override default black */
+    font-size: .3em;
+    /* Adjust this value (e.g., 1em for smaller, 1.5em for larger) */
 }
 
 /* Reduce arrow button size */
-.fc-prev-button, .fc-next-button {
-  padding: 1px; /* Smaller padding for compact buttons */
-  font-size: 0.6em; /* Smaller icon/text size */
-  width: 40px; /* Adjust width */
-  height: 20px; /* Adjust height */
-  line-height: 1.5; /* Center icon vertically */
+.fc-prev-button,
+.fc-next-button {
+    padding: 1px;
+    /* Smaller padding for compact buttons */
+    font-size: 0.6em;
+    /* Smaller icon/text size */
+    width: 40px;
+    /* Adjust width */
+    height: 20px;
+    /* Adjust height */
+    line-height: 1.5;
+    /* Center icon vertically */
 }
 
 
@@ -190,9 +205,10 @@ footer {
 
 .badge-container {
     margin: auto;
-    margin-left: -20px; 
+    margin-left: -20px;
     margin-bottom: 30px;
 }
+
 .badge-container iframe {
     width: 350px;
     height: 150px;
@@ -200,4 +216,3 @@ footer {
     transform-origin: left;
     border: none;
 }
-
