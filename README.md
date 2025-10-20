@@ -1,5 +1,5 @@
 # website
-mniemi personal website
+personal website
 
 # license
 free license / open license
