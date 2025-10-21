@@ -7,11 +7,6 @@
     <link href="mystyles.css" type="text/css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
     <style>
-        #main-calendar {
-            max-width: 900px;
-            margin: 20px auto;
-        }
-
         .blog-post {
             margin: 20px auto;
             max-width: 800px;
@@ -26,29 +21,11 @@
         .fc-event-title {
             font-size: 1.2em;
         }
-
-        #calendar {
-            max-width: 200px;
-            font-size: 0.8em;
-        }
-
-        .calendar-controls {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .calendar-controls select {
-            padding: 5px;
-            margin: 0 5px;
-            font-size: 1em;
-        }
     </style>
 </head>
-
-
 <nav>
     <ul class="nob">
-        <li><img class="float" src="swshlogo.jpg" height="160" alt="MN Website" /></li>
+        <li><img class="floatleft" src="swshlogo.jpg" margin-left: 5px height="260" alt="MN Website" /></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="calendar-blog.html">Calendar Blog</a></li>
         <li><a href="prolife.html">BabyLivesMatter</a></li>
@@ -58,16 +35,7 @@
         <li><a href="support-others.html">Support Others</a></li>
         <li><a href="info.html">Informative Links</a></li>
         <li><a href="resume.html">Resume</a></li>
-
     </ul>
-
-    <br><br>
-    <div class="badge-container">
-        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937167" style="border:none;"></iframe>
-    </div>
-</nav>
-
-<body>
     <div class="calendar-controls">
         <select id="month-select">
             <option value="0">January</option>
@@ -100,9 +68,36 @@
             <option value="2023">2023</option>
             <option value="2024">2024</option>
             <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+            <option value="2032">2032</option>
+            <option value="2033">2033</option>
+            <option value="2034">2034</option>
+            <option value="2035">2035</option>
         </select>
     </div>
-    <div id="main-calendar"></div>
+    <div id="calendar"></div>
+    <div class="fc-custom-toolbar">
+        <div class="fc-left-buttons">
+            <button class="fc-prev-button fc-button fc-button-primary">◄</button>
+            <button class="fc-next-button fc-button fc-button-primary">►</button>
+        </div>
+        <div class="fc-right-buttons">
+            <button class="fc-dayGridMonth-button fc-button fc-button-primary">Month</button>
+            <button class="fc-dayGridWeek-button fc-button fc-button-primary">Week</button>
+        </div>
+    </div>
+    <br><br>
+    <div class="badge-container">
+        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937167" style="border:none;"></iframe>
+    </div>
+</nav>
+
+<body>
     <div id="main">
         <h1>My Days Are Numbered</h1>
         <div id="blog-posts">
@@ -119,26 +114,27 @@
                 <p>Starting this blog feels like a new chapter. I'm excited to share my thoughts, experiences, and reflections with you all.</p>
             </div>
         </div>
-
-
+        <footer>
+            <p>free license / open license</p>
+        </footer>
     </div>
     <button id="backToTop" title="Back to Top">✞</button>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
     <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Main Calendar
-            var mainCalendarEl = document.getElementById('main-calendar');
-            var mainCalendar;
-            if (mainCalendarEl) {
-                mainCalendar = new FullCalendar.Calendar(mainCalendarEl, {
+            // Navigation Calendar
+            var calendarEl = document.getElementById('calendar');
+            var calendar = null;
+            if (calendarEl) {
+                calendar = new FullCalendar.Calendar(calendarEl, {
                     initialView: 'dayGridMonth',
+                    initialDate: '2025-08-01',
                     editable: false,
                     selectable: false,
                     headerToolbar: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'dayGridMonth,dayGridWeek'
+                        left: 'title',
+                        right: 'today'
                     },
                     events: [{
                             start: '2025-09-10',
@@ -167,75 +163,55 @@
                         document.querySelector(info.event.url).scrollIntoView({
                             behavior: 'smooth'
                         });
-                    }
-                });
-                mainCalendar.render();
-            }
-
-            // Nav Calendar
-            var navCalendarEl = document.getElementById('calendar');
-            var navCalendar;
-            if (navCalendarEl) {
-                navCalendar = new FullCalendar.Calendar(navCalendarEl, {
-                    initialView: 'dayGridMonth',
-                    editable: false,
-                    selectable: false,
-                    headerToolbar: {
-                        left: 'prev',
-                        center: 'title',
-                        right: 'next'
-                    },
-                    events: [{
-                            start: '2025-09-10',
-                            url: '#post-3',
-                            emojis: ['🙏', '✨', '🌟']
-                        },
-                        {
-                            start: '2025-08-15',
-                            url: '#post-2',
-                            emojis: ['🏞️', '🥾', '🌄']
-                        },
-                        {
-                            start: '2025-08-01',
-                            url: '#post-1',
-                            emojis: ['📝', '🚀', '😊']
-                        }
-                    ],
-                    eventContent: function(arg) {
-                        return {
-                            html: arg.event.extendedProps.emojis.join(' ')
-                        };
-                    },
-                    eventClick: function(info) {
-                        info.jsEvent.preventDefault();
-                        window.location.hash = info.event.url;
-                        document.querySelector(info.event.url).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                        mainCalendar.gotoDate(info.event.start); // Sync main calendar
                     },
                     eventDidMount: function(info) {
                         info.el.style.cursor = 'pointer';
                     }
                 });
-                navCalendar.render();
+                calendar.render();
             }
 
             // Dropdown Navigation
             var monthSelect = document.getElementById('month-select');
             var yearSelect = document.getElementById('year-select');
-            if (monthSelect && yearSelect && mainCalendar && navCalendar) {
+            if (monthSelect && yearSelect) {
+                monthSelect.value = '7';
+                yearSelect.value = '2025';
                 monthSelect.addEventListener('change', updateCalendar);
                 yearSelect.addEventListener('change', updateCalendar);
 
                 function updateCalendar() {
-                    var year = yearSelect.value;
-                    var month = monthSelect.value;
+                    var year = parseInt(yearSelect.value, 10);
+                    var month = parseInt(monthSelect.value, 10);
                     var date = new Date(year, month, 1);
-                    mainCalendar.gotoDate(date);
-                    navCalendar.gotoDate(date);
+                    if (calendar) {
+                        calendar.gotoDate(date);
+                    }
                 }
+                updateCalendar();
             }
+
+            // Custom Toolbar Button Actions
+            document.querySelector('.fc-prev-button').addEventListener('click', function() {
+                if (calendar) {
+                    calendar.prev();
+                }
+            });
+            document.querySelector('.fc-next-button').addEventListener('click', function() {
+                if (calendar) {
+                    calendar.next();
+                }
+            });
+            document.querySelector('.fc-dayGridMonth-button').addEventListener('click', function() {
+                if (calendar) {
+                    calendar.changeView('dayGridMonth');
+                }
+            });
+            document.querySelector('.fc-dayGridWeek-button').addEventListener('click', function() {
+                if (calendar) {
+                    calendar.changeView('dayGridWeek');
+                }
+            });
         });
     </script>
 </body>
