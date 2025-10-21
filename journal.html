@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Journal</title>
+    <link href="mystyles.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
+    <style>
+        .blog-post {
+            margin: 20px auto;
+            max-width: 1000px;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .blog-post h3 {
+            margin-top: 0;
+        }
+
+        .fc-event-title {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<nav>
+    <ul class="nob">
+        <li><img class="float" src="swshlogo.jpg" height="220" alt="MN Website" /></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calendar-blog.html">Calendar Blog</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="prolife.html">BabyLivesMatter</a></li>
+        <li><a href="adventures.html">Adventures</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="links.html">Links</a></li>
+        <li><a href="support-others.html">Support Others</a></li>
+        <li><a href="info.html">Informative Links</a></li>
+
+    </ul>
+
+    <div class="calendar-controls">
+        <select id="month-select">
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+        </select>
+        <select id="year-select">
+
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+            <option value="2032">2032</option>
+            <option value="2033">2033</option>
+            <option value="2034">2034</option>
+            <option value="2035">2035</option>
+        </select>
+    </div>
+    <div id="calendar"></div>
+    <div class="fc-custom-toolbar">
+        <div class="fc-left-buttons">
+            <button class="fc-prev-button fc-button fc-button-primary">prev</button>
+            <button class="fc-next-button fc-button fc-button-primary">next</button>
+        </div>
+        <div class="fc-right-buttons">
+            <button class="fc-dayGridMonth-button fc-button fc-button-primary">Month</button>
+            <button class="fc-dayGridWeek-button fc-button fc-button-primary">Week</button>
+        </div>
+    </div>
+</nav>
+
+<body>
+    <div id="main">
+        <h1>This is where I spitball 😸</h1>
+        <div id="blog-posts">
+
+
+            <div class="blog-post" id="post-1">
+                <h3>meh - October 21, 2025</h3>
+                <p></p>
+            </div>
+        </div>
+        <footer>
+            <p>If the LORD delights in us, HE will bring us into this land and give it to us, a land that flows with milk and honey.Only do not rebel against the LORD. And do not fear the people of the land, for they are bread for us. Their protection is removed from them, and the LORD is with us; do not fear them."  (Numbers 14(8-9), ESV)</p>
+        </footer>
+    </div>
+
+    <button id="backToTop" title="Back to Top">✞</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation Calendar
+            var calendarEl = document.getElementById('calendar');
+            var calendar = null;
+            if (calendarEl) {
+                calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    initialDate: '2025-08-01',
+                    editable: false,
+                    selectable: false,
+                    headerToolbar: {
+                        left: 'title',
+                        right: 'today'
+                    },
+                    events: [{
+                            start: '1986-01-01',
+                            url: '#post-3',
+                            emojis: ['🦟', '🛫', '🌅']
+                        },
+                        {
+                            start: '1984-07-29',
+                            url: '#post-2',
+                            emojis: ['🇨🇴', '🛫', '🇺🇸']
+                        },
+                        {
+                            start: '1979-01-01',
+                            url: '#post-1',
+                            emojis: ['🍼', '🚼', '🌎']
+                        }
+                    ],
+                    eventContent: function(arg) {
+                        return {
+                            html: arg.event.extendedProps.emojis.join(' ')
+                        };
+                    },
+                    eventClick: function(info) {
+                        info.jsEvent.preventDefault();
+                        window.location.hash = info.event.url;
+                        document.querySelector(info.event.url).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    },
+                    eventDidMount: function(info) {
+                        info.el.style.cursor = 'pointer';
+                    }
+                });
+                calendar.render();
+            }
+
+            // Dropdown Navigation
+            var monthSelect = document.getElementById('month-select');
+            var yearSelect = document.getElementById('year-select');
+            if (monthSelect && yearSelect) {
+                monthSelect.value = '7';
+                yearSelect.value = '2025';
+                monthSelect.addEventListener('change', updateCalendar);
+                yearSelect.addEventListener('change', updateCalendar);
+
+                function updateCalendar() {
+                    var year = parseInt(yearSelect.value, 10);
+                    var month = parseInt(monthSelect.value, 10);
+                    var date = new Date(year, month, 1);
+                    if (calendar) {
+                        calendar.gotoDate(date);
+                    }
+                }
+                updateCalendar();
+            }
+
+            // Custom Toolbar Button Actions
+            document.querySelector('.fc-prev-button').addEventListener('click', function() {
+                if (calendar) {
+                    calendar.prev();
+                }
+            });
+            document.querySelector('.fc-next-button').addEventListener('click', function() {
+                if (calendar) {
+                    calendar.next();
+                }
+            });
+            document.querySelector('.fc-dayGridMonth-button').addEventListener('click', function() {
+                if (calendar) {
+                    calendar.changeView('dayGridMonth');
+                }
+            });
+            document.querySelector('.fc-dayGridWeek-button').addEventListener('click', function() {
+                if (calendar) {
+                    calendar.changeView('dayGridWeek');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
