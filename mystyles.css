@@ -196,56 +196,56 @@ footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 5px 10px;
-    background-color: rgba(255, 248, 248, 0);
+    padding: 6px 15px;
+    background-color: rgba(250, 0, 0, 0);
     /* Match calendar-blog.html */
     border-top: 1px solid #ccc;
-    margin-left: -5px;
+    /* margin-left: -5px; */
     /* Align with nob */
-    width: calc(226px + 0px);
-    /* Match nav width plus offset */
+
 }
 
 .fc-custom-toolbar .fc-prev-button,
 .fc-custom-toolbar .fc-next-button {
-    margin-right: 10px;
+    margin-right: 40px;
     /* Space between prev and next */
 }
+
+.fc-prev-button,
+.fc-next-button {
+    padding: 1px;
+    font-size: 0.8em;
+    width: 35px;
+    height: 20px;
+    line-height: 1.0px;
+    color: ghostwhite !important;
+    background-color: #4682B4;
+}
+
 
 .fc {
     font-size: 0.65em;
 }
 
+/* Dates in calendar */
 .fc-daygrid-day-number {
     color: ghostwhite !important;
-    /* Date numbers */
 }
 
 .fc-event {
-    background-color: #4682B4;
+    background-color: darkcyan;
     color: #fff;
     border: none;
     font-size: 0.3em;
-
 }
 
+/* Calendar title: Month Year */
 .fc-toolbar-title {
     color: ghostwhite !important;
-    /* Calendar title */
     font-size: 0.3em;
 }
 
-.fc-prev-button,
-.fc-next-button {
-    padding: 2px;
-    font-size: 0.6em;
-    width: 20px;
-    height: 20px;
-    line-height: 1.5;
-    color: ghostwhite !important;
-    background-color: #4682B4;
-}
-
+/*days of the week in calendar */
 .fc-col-header-cell a {
     color: ghostwhite !important;
     /* Days of the week */
@@ -278,10 +278,10 @@ footer {
     /* Match nav width minus margin */
 }
 
+/* Show TryHackMe badge */
 .badge-container iframe {
     width: 100%;
     height: 100px;
-    /* Show TryHackMe badge */
     transform: scale(0.7);
     transform-origin: center;
     border: none;
