@@ -67,6 +67,16 @@ h2 {
     margin-top: 10px;
     font-family: Georgia, Times, serif;
     text-wrap: balance;
+    overflow-wrap: break-word;
+    /*wraps*/
+}
+
+h3 {
+    margin-top: 10px;
+    font-family: Georgia, Times, serif;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    /*wraps*/
 }
 
 /* Body links */
