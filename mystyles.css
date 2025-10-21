@@ -213,11 +213,11 @@ footer {
 
 .fc-prev-button,
 .fc-next-button {
-    padding: 1px;
-    font-size: 0.8em;
-    width: 35px;
-    height: 20px;
-    line-height: 1.0px;
+    padding: 5px;
+    font-size: 1em;
+    width: 50px;
+    height: 30px;
+    line-height: 20px;
     color: ghostwhite !important;
     background-color: #4682B4;
 }
