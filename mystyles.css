@@ -225,7 +225,8 @@ footer {
     font-size: 0.3em;
 }
 
-.fc-prev-button, .fc-next-button {
+.fc-prev-button,
+.fc-next-button {
     padding: 2px;
     font-size: 0.6em;
     width: 20px;
@@ -240,6 +241,8 @@ footer {
     /* Days of the week */
     text-decoration: none;
     /* Remove underline */
+    font-size: 0.5em;
+    /* Smaller day-of-week text */
 }
 
 .fc-button {
@@ -254,7 +257,7 @@ footer {
     width: calc(100% - 275px);
     box-sizing: border-box;
     color: ghostwhite;
-    padding: 0 15px; 
+    padding: 0 15px;
 }
 
 /* THM dynamic Badge */
