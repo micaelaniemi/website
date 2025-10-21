@@ -15,6 +15,13 @@ input[type=checkbox] {
     margin-left: 30px;
 }
 
+.floatleft {
+    float: left;
+    margin-left: -30px;
+    /* Align with nob’s margin-left: 15px */
+    display: block;
+}
+
 .center {
     display: block;
     margin-left: 395px;
@@ -39,14 +46,7 @@ body {
 .nob {
     list-style-type: none;
     margin-left: 15px;
-    /* Align with nob */
-}
-
-.floatleft {
-    float: left;
-    margin-left: -30px;
-    /* Align with nob’s margin-left: -60px */
-    display: block;
+    /* Align nav items */
 }
 
 .indented-list {
@@ -87,11 +87,13 @@ a:visited {
 nav {
     display: block;
     position: fixed;
-    width: 250px;
+    width: 300px;
     height: 100vh;
     top: 0;
     left: 0;
     z-index: 1000;
+    overflow-y: auto;
+    /* Allow scrolling to view badge */
 }
 
 nav a:link,
@@ -116,6 +118,7 @@ footer {
     font-size: 65%;
     color: lightsteelblue;
     text-align: center;
+    /* Center footer text */
 }
 
 /* Back to Top button */
@@ -146,7 +149,7 @@ footer {
 
 /* Calendar styles */
 #calendar {
-    max-width: 100%;
+    max-width: 232px;
     /* Match nav width */
     min-height: 350px;
     /* display 4 weeks */
@@ -160,7 +163,7 @@ footer {
 
 .calendar-controls {
     text-align: center;
-    margin: 10px 0 10px -px;
+    margin: 10px 0 10px;
     /* Align with nob */
     width: calc(250px + 0px);
     /* Match nav width plus offset */
@@ -211,7 +214,7 @@ footer {
     color: #fff;
     border: none;
     font-size: 0.3em;
-    padding: 0px;
+
 }
 
 .fc-toolbar-title {
@@ -254,30 +257,32 @@ footer {
 
 /* THM dynamic Badge */
 .badge-container {
-    margin: auto;
-    margin-left: -20px;
+    margin: 20px 10 20px 15px;
+    /* Align with nob */
+    width: calc(300px - -30px);
+    /* Match nav width minus margin */
 }
 
 .badge-container iframe {
-    width: 350px;
+    width: 100%;
     height: 100px;
-    transform: scale(0.8);
+    /* Show TryHackMe badge */
+    transform: scale(0.7);
     transform-origin: center;
     border: none;
 }
 
 /* Responsive design */
-@media screen and (max-width: 600px) {
-
-    /* nav {
+@media screen and (max-width: 350px) {
+    nav {
         width: 100%;
         height: auto;
+        /* Allow content to expand */
         position: static;
-    } */
+    }
+
     #main {
         margin-left: 0;
         width: 100%;
     }
-
-    */
 }
