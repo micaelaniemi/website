@@ -207,7 +207,7 @@ footer {
 
 .fc-custom-toolbar .fc-prev-button,
 .fc-custom-toolbar .fc-next-button {
-    margin-right: 40px;
+    margin: center;
     /* Space between prev and next */
 }
 
