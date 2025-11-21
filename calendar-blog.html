@@ -1,349 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Calendar</title>
     <link href="mystyles.css" type="text/css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
     <style>
-      .blog-post {
-        margin: 20px auto;
-        max-width: 1000px;
-        padding: 15px;
-        border-bottom: 1px solid #ccc;
-      }
+        .blog-post {
+            margin: 20px auto;
+            max-width: 1000px;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
 
-      .blog-post h3 {
-        margin-top: 0;
-      }
+        .blog-post h3 {
+            margin-top: 0;
+        }
 
-      .fc-event-title {
-        font-size: 1.2em;
-      }
+        .fc-event-title {
+            font-size: 1.2em;
+        }
     </style>
-  </head>
-  <nav>
+</head>
+<nav>
     <ul class="nob">
-      <li>
-        <img class="float" src="swshlogo.jpg" height="220" alt="MN Website" />
-      </li>
-      <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <a href="calendar-blog.html">Calendar</a>
-      </li>
-      <li>
-        <a href="journal.html">Journal</a>
-      </li>
-      <li>
-        <a href="prolife.html">BabyLivesMatter</a>
-      </li>
-      <li>
-        <a href="adventures.html">Adventures</a>
-      </li>
-      <li>
-        <a href="books.html">Books</a>
-      </li>
-      <li>
-        <a href="links.html">Links</a>
-      </li>
-      <li>
-        <a href="support-others.html">Support Others</a>
-      </li>
+        <li>
+            <img class="float" src="swshlogo.jpg" height="220" alt="MN Website" />
+        </li>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="calendar-blog.html">Calendar</a>
+        </li>
+        <li>
+            <a href="journal.html">Journal</a>
+        </li>
+        <li>
+            <a href="prolife.html">BabyLivesMatter</a>
+        </li>
+        <li>
+            <a href="adventures.html">Adventures</a>
+        </li>
+        <li>
+            <a href="books.html">Books</a>
+        </li>
+        <li>
+            <a href="links.html">Links</a>
+        </li>
+        <li>
+            <a href="support-others.html">Support Others</a>
+        </li>
     </ul>
     <div class="calendar-controls">
-      <select id="month-select">
-        <option value="0">January</option>
-        <option value="1">February</option>
-        <option value="2">March</option>
-        <option value="3">April</option>
-        <option value="4">May</option>
-        <option value="5">June</option>
-        <option value="6">July</option>
-        <option value="7">August</option>
-        <option value="8">September</option>
-        <option value="9">October</option>
-        <option value="10">November</option>
-        <option value="11">December</option>
-      </select>
-      <select id="year-select">
-        <option value="1979">1979</option>
-        <option value="1984">1984</option>
-        <option value="1986">1986</option>
-        <option value="2010">2010</option>
-        <option value="2011">2011</option>
-        <option value="2012">2012</option>
-        <option value="2013">2013</option>
-        <option value="2014">2014</option>
-        <option value="2015">2015</option>
-        <option value="2016">2016</option>
-        <option value="2017">2017</option>
-        <option value="2018">2018</option>
-        <option value="2019">2019</option>
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
-        <option value="2022">2022</option>
-        <option value="2023">2023</option>
-        <option value="2024">2024</option>
-        <option value="2025">2025</option>
-        <option value="2026">2026</option>
-        <option value="2027">2027</option>
-        <option value="2028">2028</option>
-        <option value="2029">2029</option>
-        <option value="2030">2030</option>
-        <option value="2031">2031</option>
-        <option value="2032">2032</option>
-        <option value="2033">2033</option>
-        <option value="2034">2034</option>
-        <option value="2035">2035</option>
-      </select>
+        <select id="month-select">
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+        </select>
+        <select id="year-select">
+            <option value="1979">1979</option>
+            <option value="1984">1984</option>
+            <option value="1986">1986</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+            <option value="2032">2032</option>
+            <option value="2033">2033</option>
+            <option value="2034">2034</option>
+            <option value="2035">2035</option>
+        </select>
     </div>
     <div id="calendar"></div>
     <div class="fc-custom-toolbar">
-      <div class="fc-left-buttons">
-        <button class="fc-prev-button fc-button fc-button-primary">prev</button>
-        <button class="fc-next-button fc-button fc-button-primary">next</button>
-      </div>
-      <div class="spacer" style="width: 5px;"></div>
-      <!-- Spacer div -->
-      <div class="fc-right-buttons">
-        <button class="fc-dayGridMonth-button fc-button fc-button-primary">Month</button>
-        <button class="fc-dayGridWeek-button fc-button fc-button-primary">Week</button>
-      </div>
+        <div class="fc-left-buttons">
+            <button class="fc-prev-button fc-button fc-button-primary">prev</button>
+            <button class="fc-next-button fc-button fc-button-primary">next</button>
+        </div>
+        <div class="spacer" style="width: 5px;"></div>
+        <!-- Spacer div -->
+        <div class="fc-right-buttons">
+            <button class="fc-dayGridMonth-button fc-button fc-button-primary">Month</button>
+            <button class="fc-dayGridWeek-button fc-button fc-button-primary">Week</button>
+        </div>
     </div>
-  </nav>
-  <body>
+</nav>
+
+<body>
     <div id="main">
-      <h1>My Days Are Numbered</h1>
-      <div class="blog-post" id="post-82">
-        <h3>Dream - November 12, 2025</h3>
-        <p>I had a dream this morning that Europe was being cursed.  In my dream, the curses of this song were being chanted against the leaders of the EU.</p>
-        <div style="text-align:center; margin:15px 0; overflow:hidden;">
-          <video src="dream_2025-11-12_09-08-21.mp4" width="350" height="auto" controls autoplay muted loop style="max-width:100%; height:auto; display:inline-block;"></video>
+        <h1>My Days Are Numbered</h1>
+        <div class="blog-post" id="post-82">
+            <h3>Dream - November 12, 2025</h3>
+            <p>I had a dream this morning that Europe was being cursed. In my dream, the curses of this song were being chanted against the leaders of the EU.</p>
+            <div style="text-align:center; margin:15px 0; overflow:hidden;">
+                <video src="dream_2025-11-12_09-08-21.mp4" width="350" height="auto" controls autoplay muted loop style="max-width:100%; height:auto; display:inline-block;"></video>
+            </div>
         </div>
-      </div>
-      <div class="blog-post" id="post-81">
-        <h3>Dream - November 11, 2025</h3>
-        <p> I had a dream on this morning that I saw two big rigs in a head on collision then my dream shifted to something else, but later on, I had the previous dream again, the exact same dream as the first: two big rigs in a head on collision. </p>
-        <div style="text-align:center; margin:15px 0; overflow:hidden;">
-          <img src="dream_11-11-25.jpg" width="350" height="auto" alt="crash occurred on Nov 11, 2025 on I-30" style="max-width:100%; height:auto; display:inline-block;">
+        <div class="blog-post" id="post-81">
+            <h3>Dream - November 11, 2025</h3>
+            <p> I had a dream on this morning that I saw two big rigs in a head on collision then my dream shifted to something else, but later on, I had the previous dream again, the exact same dream as the first: two big rigs in a head on collision. </p>
+            <div style="text-align:center; margin:15px 0; overflow:hidden;">
+                <img src="dream_11-11-25.jpg" width="350" height="auto" alt="crash occurred on Nov 11, 2025 on I-30" style="max-width:100%; height:auto; display:inline-block;">
+            </div>
         </div>
-      </div>
-      <div class="blog-post" id="post-80">
-        <h3>Dream - October 22, 2025</h3>
-        <p>I had a dream this morning that I was somewhere outside. I was looking up a hillside, there were two people near the top with Storm on a leash. And one of them said to me, "We had to take Shadow away from you because we know your time is short but we have brought Storm for you to give you comfort." Then, they unleashed her. As Storm was running down the hillside towards me, she was so happy and excited to see me!!... I was very sad and started crying uncontrollably because I never had the chance to say goodbye but there was this great divide between Storm and I, this black valley between us; and the blackness, this impenetrable darkness, encased me and then I woke up.</p>
-        <div style="text-align:center; margin:15px 0; overflow:hidden;">
-      </div>
-      <div class="blog-post" id="post-79">
-        <h3>Dream - January 27/28?, 2025</h3>
-        <p></p>
-          <div style="text-align:center; margin:15px 0; overflow:hidden;">
-          <img src="dream_Jan-27-2025.jpg" width="350" height="auto" style="max-width:100%; height:auto; display:inline-block;">
-          <img src="Jan-31-2025.jpg" width="350" height="auto" style="max-width:100%; height:auto; display:inline-block;">
-           <div class="blog-post" id="post-78">
-        <h3>Dream - May 19-21?, 2023</h3> <p></p>
-         <div style="text-align:center; margin:15px 0; overflow:hidden;">
-          <img src="dream_may2023.jpg" width="350" height="auto" style="max-width:100%; height:auto; display:inline-block;">
-      </div>
-      <div class="blog-post" id="post-77">
-        <h3>Dream - Jan 202x??? </h3>
-        <p> This dream occurred a couple of months or a year after the Jan dream? </p>
-          <div style="text-align:center; margin:15px 0; overflow:hidden;">
-          <video src="dream_.mp4" width="350" height="auto" controls autoplay muted loop style="max-width:100%; height:auto; display:inline-block;"></video>
-      </div>
+        <div class="blog-post" id="post-80">
+            <h3>Dream - October 22, 2025</h3>
+            <p>I had a dream this morning that I was somewhere outside. I was looking up a hillside, there were two people near the top with Storm on a leash. And one of them said to me, "We had to take Shadow away from you because we know your time is short but we have brought Storm for you to give you comfort." Then, they unleashed her. As Storm was running down the hillside towards me, she was so happy and excited to see me!!... I was very sad and started crying uncontrollably because I never had the chance to say goodbye but there was this great divide between Storm and I, this black valley between us; and the blackness, this impenetrable darkness, encased me and then I woke up.</p>
+            <div style="text-align:center; margin:15px 0; overflow:hidden;">
+            </div>
+            <div class="blog-post" id="post-79">
+                <h3>Dream - January 27/28?, 2025</h3>
+                <p></p>
+                <div style="text-align:center; margin:15px 0; overflow:hidden;">
+                    <img src="dream_Jan-27-2025.jpg" width="350" height="auto" style="max-width:100%; height:auto; display:inline-block;">
+                    <img src="Jan-31-2025.jpg" width="350" height="auto" style="max-width:100%; height:auto; display:inline-block;">
+                    <div class="blog-post" id="post-78">
+                        <h3>Dream - May 19-21?, 2023</h3>
+                        <p></p>
+                        <div style="text-align:center; margin:15px 0; overflow:hidden;">
+                            <img src="dream_may2023.jpg" width="350" height="auto" style="max-width:100%; height:auto; display:inline-block;">
+                        </div>
+                        <div class="blog-post" id="post-77">
+                            <h3>Dream - Jan 202x??? </h3>
+                            <p> This dream occurred a couple of months or a year after the Jan dream? </p>
+                            <div style="text-align:center; margin:15px 0; overflow:hidden;">
+                                <video src="dream_.mp4" width="350" height="auto" controls autoplay muted loop style="max-width:100%; height:auto; display:inline-block;"></video>
+                            </div>
 
-        
-<div class="blog-post" id="post-76">
-  <h3>Dream - Jan 2020?</h3>
-  <p>I don't know when I dreamt this. I'll have to see if I had written anything down and update this.</p>
-  
-  <div style="text-align:center; margin:20px 0;">
-    <video src="dream_Jan-2020.mp4" width="350" controls autoplay muted loop style="max-width:100%; height:auto;"></video>
-  </div>
-</div>
-        
-      <div class="blog-post" id="post-8">
-        <h3>Huntsville, AL - May 22, 2018</h3>
-        <p>dream <br> Current Status: [May] transitioned from Electrical Engineer into Information Administrator 3 (Cybersecurity role). </p>
-        <div style="text-align:center; margin:15px 0; overflow:hidden;">
-      </div>
-      <div class="blog-post" id="post-7">
-        <h3>Built an altar to the Lord - February 01?, 2018</h3>
-        <p>Called the area: East of Eden </p>
-        <div style="text-align:center; margin:15px 0; overflow:hidden;">
-      </div>
-      <div class="blog-post" id="post-6">
-        <h3>Bought my 1st Bible - January 01?, 2018</h3>
-        <p>started helping poor people; </p>
-        <div style="text-align:center; margin:15px 0; overflow:hidden;">
-      </div>
-      <div class="blog-post" id="post-5">
-        <h3>Jeremiah 29(11) - December 17, 2017</h3>
-        <p>saved ✝️</p>
-        <div style="text-align:center; margin:15px 0; overflow:hidden;">
-      </div>
-      <div class="blog-post" id="post-4">
-        <h3>2016 Elections - October 01, 2016</h3>
-        <p>I heard about the Wikileaks drops on the news, joined Twitter to find out more information which brought me to 4chan, /pol/, and other forums. At that same time, I wanted to create a website but I didn't want it to get hacked. I can't remember if I searched for hacking movies or if it was recommended to me on my Netflix feed. Regardless, that lead me to watch a movie called The Hacker Wars, which peaked my interest into cybersecurity. Since I didn't know anything about hacking, I decided to go where I thought hackers would be - AnonOps [LOL. (Seriously, I did that for a month or two.) I was also going to MeetUps related to cybersecurity and learning online. Then one day, on AnonOps, bots started flooding the feed with pizza comments. It was so out of character that it lead me to search various sites on "pizza." That is how I learned about Pizzagate, which I refer to as Pedogate, on YouTube. And this, believe it or not, brought me back to researching on the Wikileaks website.😆 Then, Q started posting on /pol. <br><br> Current Status: full time employee as an Avonics Test Engineer; rented 2 bdrm 1 bath house. Had 2 Dogs: Storm and Wicket.<br> 2016 was the year that I spent most of my days doing some type of outdoor adventure. </p>
-      <div style="text-align:center; margin:15px 0; overflow:hidden;">
-      </div>
-      <div class="blog-post" id="post-3">
-        <h3>moved from MN to San Diego, CA - January 01, 1986</h3>
-        <p>text</p>
-      </div>
-      <div class="blog-post" id="post-2">
-        <h3>Lamentations 3(22-23) - July 29, 1984</h3>
-        <p></p>
-      </div>
-      <div class="blog-post" id="post-1">
-        <h3>Psalm 139(13-14) - January 01, 1979</h3>
-        <p></p>
-      </div>
-    </div>
-    <footer>
-      <p>Jesus is The Way, The Truth, and The Life. Nobody comes to The Father, except through Him.</p>
-    </footer>
-    </div>
-    <button id="backToTop" title="Back to Top">✞</button>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Navigation Calendar
-        var calendarEl = document.getElementById('calendar');
-        var calendar = null;
-        if (calendarEl) {
-          calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            initialDate: '2025-08-01',
-            editable: false,
-            selectable: false,
-            headerToolbar: {
-              left: 'title',
-              right: 'today'
-            },
-            events: [{
-              start: '2025-11-12',
-              url: '#post-82',
-              emojis: ['😴', '', '']
-            }, {
-              start: '2025-11-11',
-              url: '#post-81',
-              emojis: ['😴', '', '']
-            }, {
-              start: '2025-10-22',
-              url: '#post-80',
-              emojis: ['😴', '', '']
-            }, {
-              start: '2025-01-27',
-              url: '#post-79',
-              emojis: ['😴', '', '']
-            }, {
-              start: '2023-05-19',
-              url: '#post-78',
-              emojis: ['😴', '', '']
-            }, {
-              start: '2021-01-01',
-              url: '#post-77',
-              emojis: ['😴', '', '']
-            }, {
-              start: '2020-01-01',
-              url: '#post-76',
-              emojis: ['😴', '', '']
-            },
-              {
-              start: '2018-05-22',
-              url: '#post-8',
-              emojis: ['🕯️', '', '']
-            }, {
-              start: '2018-02-01',
-              url: '#post-7',
-              emojis: ['🕯️', '', '']
-            }, {
-              start: '2018-01-01',
-              url: '#post-6',
-              emojis: ['📖', '✝️', '']
-            }, {
-              start: '2017-12-17',
-              url: '#post-5',
-              emojis: ['✝️', '', '']
-            }, {
-              start: '2016-10-01',
-              url: '#post-4',
-              emojis: ['💻', '🔎', '']
-            }, {
-              start: '1986-01-01',
-              url: '#post-3',
-              emojis: ['🦟', '🛫', '🌅']
-            }, {
-              start: '1984-07-29',
-              url: '#post-2',
-              emojis: ['🇨🇴', '🛫', '🇺🇸']
-            }, {
-              start: '1979-01-01',
-              url: '#post-1',
-              emojis: ['🍼', '🚼', '🌎']
-            }],
-            eventContent: function(arg) {
-              return {
-                html: arg.event.extendedProps.emojis.join(' ')
-              };
-            },
-            eventClick: function(info) {
-              info.jsEvent.preventDefault();
-              window.location.hash = info.event.url;
-              document.querySelector(info.event.url).scrollIntoView({
-                behavior: 'smooth'
-              });
-            },
-            eventDidMount: function(info) {
-              info.el.style.cursor = 'pointer';
-            }
-          });
-          calendar.render();
-        }
-        // Dropdown Navigation
-        var monthSelect = document.getElementById('month-select');
-        var yearSelect = document.getElementById('year-select');
-        if (monthSelect && yearSelect) {
-          monthSelect.value = '7';
-          yearSelect.value = '2025';
-          monthSelect.addEventListener('change', updateCalendar);
-          yearSelect.addEventListener('change', updateCalendar);
 
-          function updateCalendar() {
-            var year = parseInt(yearSelect.value, 10);
-            var month = parseInt(monthSelect.value, 10);
-            var date = new Date(year, month, 1);
-            if (calendar) {
-              calendar.gotoDate(date);
-            }
-          }
-          updateCalendar();
-        }
-        // Custom Toolbar Button Actions
-        document.querySelector('.fc-prev-button').addEventListener('click', function() {
-          if (calendar) {
-            calendar.prev();
-          }
-        });
-        document.querySelector('.fc-next-button').addEventListener('click', function() {
-          if (calendar) {
-            calendar.next();
-          }
-        });
-        document.querySelector('.fc-dayGridMonth-button').addEventListener('click', function() {
-          if (calendar) {
-            calendar.changeView('dayGridMonth');
-          }
-        });
-        document.querySelector('.fc-dayGridWeek-button').addEventListener('click', function() {
-          if (calendar) {
-            calendar.changeView('dayGridWeek');
-          }
-        });
-      });
-    </script>
-  </body>
+                            <div class="blog-post" id="post-76">
+                                <h3>Dream - Jan 2020?</h3>
+                                <p>I don't know when I dreamt this. I'll have to see if I had written anything down and update this.</p>
+
+                                <div style="text-align:center; margin:20px 0;">
+                                    <video src="dream_Jan-2020.mp4" width="350" controls autoplay muted loop style="max-width:100%; height:auto;"></video>
+                                </div>
+                            </div>
+
+                            <div class="blog-post" id="post-8">
+                                <h3>Huntsville, AL - May 22, 2018</h3>
+                                <p>dream <br> Current Status: [May] transitioned from Electrical Engineer into Information Administrator 3 (Cybersecurity role). </p>
+                                <div style="text-align:center; margin:15px 0; overflow:hidden;">
+                                </div>
+                                <div class="blog-post" id="post-7">
+                                    <h3>Built an altar to the Lord - February 01?, 2018</h3>
+                                    <p>Called the area: East of Eden </p>
+                                    <div style="text-align:center; margin:15px 0; overflow:hidden;">
+                                    </div>
+                                    <div class="blog-post" id="post-6">
+                                        <h3>Bought my 1st Bible - January 01?, 2018</h3>
+                                        <p>started helping poor people; </p>
+                                        <div style="text-align:center; margin:15px 0; overflow:hidden;">
+                                        </div>
+                                        <div class="blog-post" id="post-5">
+                                            <h3>Jeremiah 29(11) - December 17, 2017</h3>
+                                            <p>saved ✝️</p>
+                                            <div style="text-align:center; margin:15px 0; overflow:hidden;">
+                                            </div>
+                                            <div class="blog-post" id="post-4">
+                                                <h3>2016 Elections - October 01, 2016</h3>
+                                                <p>I heard about the Wikileaks drops on the news, joined Twitter to find out more information which brought me to 4chan, /pol/, and other forums. At that same time, I wanted to create a website but I didn't want it to get hacked. I can't remember if I searched for hacking movies or if it was recommended to me on my Netflix feed. Regardless, that lead me to watch a movie called The Hacker Wars, which peaked my interest into cybersecurity. Since I didn't know anything about hacking, I decided to go where I thought hackers would be - AnonOps [LOL. (Seriously, I did that for a month or two.) I was also going to MeetUps related to cybersecurity and learning online. Then one day, on AnonOps, bots started flooding the feed with pizza comments. It was so out of character that it lead me to search various sites on "pizza." That is how I learned about Pizzagate, which I refer to as Pedogate, on YouTube. And this, believe it or not, brought me back to researching on the Wikileaks website.😆 Then, Q started posting on /pol. <br><br> Current Status: full time employee as an Avonics Test Engineer; rented 2 bdrm 1 bath house. Had 2 Dogs: Storm and Wicket.<br> 2016 was the year that I spent most of my days doing some type of outdoor adventure. </p>
+                                                <div style="text-align:center; margin:15px 0; overflow:hidden;">
+                                                </div>
+                                                <div class="blog-post" id="post-3">
+                                                    <h3>moved from MN to San Diego, CA - January 01, 1986</h3>
+                                                    <p>text</p>
+                                                </div>
+                                                <div class="blog-post" id="post-2">
+                                                    <h3>Lamentations 3(22-23) - July 29, 1984</h3>
+                                                    <p></p>
+                                                </div>
+                                                <div class="blog-post" id="post-1">
+                                                    <h3>Psalm 139(13-14) - January 01, 1979</h3>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <footer>
+                                                <p>Jesus is The Way, The Truth, and The Life. Nobody comes to The Father, except through Him.</p>
+                                            </footer>
+                                        </div>
+                                        <button id="backToTop" title="Back to Top">✞</button>
+                                        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+                                        <script src="script.js"></script>
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function() {
+                                                // Navigation Calendar
+                                                var calendarEl = document.getElementById('calendar');
+                                                var calendar = null;
+                                                if (calendarEl) {
+                                                    calendar = new FullCalendar.Calendar(calendarEl, {
+                                                        initialView: 'dayGridMonth',
+                                                        initialDate: '2025-08-01',
+                                                        editable: false,
+                                                        selectable: false,
+                                                        headerToolbar: {
+                                                            left: 'title',
+                                                            right: 'today'
+                                                        },
+                                                        events: [{
+                                                                start: '2025-11-12',
+                                                                url: '#post-82',
+                                                                emojis: ['😴', '', '']
+                                                            }, {
+                                                                start: '2025-11-11',
+                                                                url: '#post-81',
+                                                                emojis: ['😴', '', '']
+                                                            }, {
+                                                                start: '2025-10-22',
+                                                                url: '#post-80',
+                                                                emojis: ['😴', '', '']
+                                                            }, {
+                                                                start: '2025-01-27',
+                                                                url: '#post-79',
+                                                                emojis: ['😴', '', '']
+                                                            }, {
+                                                                start: '2023-05-19',
+                                                                url: '#post-78',
+                                                                emojis: ['😴', '', '']
+                                                            }, {
+                                                                start: '2021-01-01',
+                                                                url: '#post-77',
+                                                                emojis: ['😴', '', '']
+                                                            }, {
+                                                                start: '2020-01-01',
+                                                                url: '#post-76',
+                                                                emojis: ['😴', '', '']
+                                                            },
+                                                            {
+                                                                start: '2018-05-22',
+                                                                url: '#post-8',
+                                                                emojis: ['🕯️', '', '']
+                                                            }, {
+                                                                start: '2018-02-01',
+                                                                url: '#post-7',
+                                                                emojis: ['🕯️', '', '']
+                                                            }, {
+                                                                start: '2018-01-01',
+                                                                url: '#post-6',
+                                                                emojis: ['📖', '✝️', '']
+                                                            }, {
+                                                                start: '2017-12-17',
+                                                                url: '#post-5',
+                                                                emojis: ['✝️', '', '']
+                                                            }, {
+                                                                start: '2016-10-01',
+                                                                url: '#post-4',
+                                                                emojis: ['💻', '🔎', '']
+                                                            }, {
+                                                                start: '1986-01-01',
+                                                                url: '#post-3',
+                                                                emojis: ['🦟', '🛫', '🌅']
+                                                            }, {
+                                                                start: '1984-07-29',
+                                                                url: '#post-2',
+                                                                emojis: ['🇨🇴', '🛫', '🇺🇸']
+                                                            }, {
+                                                                start: '1979-01-01',
+                                                                url: '#post-1',
+                                                                emojis: ['🍼', '🚼', '🌎']
+                                                            }
+                                                        ],
+                                                        eventContent: function(arg) {
+                                                            return {
+                                                                html: arg.event.extendedProps.emojis.join(' ')
+                                                            };
+                                                        },
+                                                        eventClick: function(info) {
+                                                            info.jsEvent.preventDefault();
+                                                            window.location.hash = info.event.url;
+                                                            document.querySelector(info.event.url).scrollIntoView({
+                                                                behavior: 'smooth'
+                                                            });
+                                                        },
+                                                        eventDidMount: function(info) {
+                                                            info.el.style.cursor = 'pointer';
+                                                        }
+                                                    });
+                                                    calendar.render();
+                                                }
+                                                // Dropdown Navigation
+                                                var monthSelect = document.getElementById('month-select');
+                                                var yearSelect = document.getElementById('year-select');
+                                                if (monthSelect && yearSelect) {
+                                                    monthSelect.value = '7';
+                                                    yearSelect.value = '2025';
+                                                    monthSelect.addEventListener('change', updateCalendar);
+                                                    yearSelect.addEventListener('change', updateCalendar);
+
+                                                    function updateCalendar() {
+                                                        var year = parseInt(yearSelect.value, 10);
+                                                        var month = parseInt(monthSelect.value, 10);
+                                                        var date = new Date(year, month, 1);
+                                                        if (calendar) {
+                                                            calendar.gotoDate(date);
+                                                        }
+                                                    }
+                                                    updateCalendar();
+                                                }
+                                                // Custom Toolbar Button Actions
+                                                document.querySelector('.fc-prev-button').addEventListener('click', function() {
+                                                    if (calendar) {
+                                                        calendar.prev();
+                                                    }
+                                                });
+                                                document.querySelector('.fc-next-button').addEventListener('click', function() {
+                                                    if (calendar) {
+                                                        calendar.next();
+                                                    }
+                                                });
+                                                document.querySelector('.fc-dayGridMonth-button').addEventListener('click', function() {
+                                                    if (calendar) {
+                                                        calendar.changeView('dayGridMonth');
+                                                    }
+                                                });
+                                                document.querySelector('.fc-dayGridWeek-button').addEventListener('click', function() {
+                                                    if (calendar) {
+                                                        calendar.changeView('dayGridWeek');
+                                                    }
+                                                });
+                                            });
+                                        </script>
+</body>
+
 </html>
