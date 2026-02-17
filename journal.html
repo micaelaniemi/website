@@ -27,78 +27,77 @@
 <body>
 
     <!-- Navigation + Calendar -->
- <nav>   
-    <ul class="nob">
-        <li><img class="float" src="swshlogo.jpg" height="220" alt="MN Website" /></li>
+    <nav>
+        <ul class="nob">
+            <li><img class="float" src="swshlogo.jpg" height="220" alt="MN Website" /></li>
 
-        <li><a href="index.html">Home</a></li>
-        <li><a href="calendar-blog.html">Calendar</a></li>
-        <li><a href="journal.html">Journal</a></li>
-        <li><a href="prolife.html">BabyLivesMatter</a></li>
-        <li><a href="adventures.html">Adventures</a></li>
-        <li><a href="books.html">Books</a></li>
-        <li><a href="links.html">Links</a></li>
-        <li><a href="support-others.html">Support Others</a></li>
-    </ul>
-    
-    <div class="badge-container">
-        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937167" style="border:none;"></iframe>
-    </div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calendar-blog.html">Calendar</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="prolife.html">BabyLivesMatter</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="support-others.html">Support Others</a></li>
+        </ul>
 
-    <div class="calendar-controls">
-        <select id="month-select">
-            <option value="0">January</option>
-            <option value="1">February</option>
-            <option value="2">March</option>
-            <option value="3">April</option>
-            <option value="4">May</option>
-            <option value="5">June</option>
-            <option value="6">July</option>
-            <option value="7">August</option>
-            <option value="8">September</option>
-            <option value="9">October</option>
-            <option value="10">November</option>
-            <option value="11">December</option>
-        </select>
-        <select id="year-select">
-
-<option value="2026">2026</option>
-            <option value="2015">2015</option>
-            <option value="2016">2016</option>
-            <option value="2017">2017</option>
-            <option value="2018">2018</option>
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>                
-            <option value="2025">2025</option>
-            <option value="2026">2026</option>
-            <option value="2027">2027</option>
-            <option value="2028">2028</option>
-            <option value="2029">2029</option>
-            <option value="2030">2030</option>
-            <option value="2031">2031</option>
-            <option value="2032">2032</option>
-            <option value="2033">2033</option>
-            <option value="2034">2034</option>
-            <option value="2035">2035</option>
-        </select>
-    </div>
-    <div id="calendar"></div>
-    <div class="fc-custom-toolbar">
-        <div class="fc-left-buttons">
-            <button class="fc-prev-button fc-button fc-button-primary">prev</button>
-            <button class="fc-next-button fc-button fc-button-primary">next</button>
+        <div class="badge-container">
+            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3937167" style="border:none;"></iframe>
         </div>
-        <div class="spacer" style="width: 5px;"></div> <!-- Spacer div -->
-        <div class="fc-right-buttons">
-            <button class="fc-dayGridMonth-button fc-button fc-button-primary">Month</button>
-            <button class="fc-dayGridWeek-button fc-button fc-button-primary">Week</button>
+
+        <div class="calendar-controls">
+            <select id="month-select">
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+            </select>
+            <select id="year-select">
+                <option value="2026">2026</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+                <option value="2034">2034</option>
+                <option value="2035">2035</option>
+            </select>
         </div>
-    </div>
-</nav>
+        <div id="calendar"></div>
+        <div class="fc-custom-toolbar">
+            <div class="fc-left-buttons">
+                <button class="fc-prev-button fc-button fc-button-primary">prev</button>
+                <button class="fc-next-button fc-button fc-button-primary">next</button>
+            </div>
+            <div class="spacer" style="width: 5px;"></div> <!-- Spacer div -->
+            <div class="fc-right-buttons">
+                <button class="fc-dayGridMonth-button fc-button fc-button-primary">Month</button>
+                <button class="fc-dayGridWeek-button fc-button fc-button-primary">Week</button>
+            </div>
+        </div>
+    </nav>
 
 
     <div id="main">
@@ -109,74 +108,72 @@
             <div class="blog-post" id="post-22">
                 <h3>Jehovah Rapha - December 15, 2025</h3>
                 <p> I'm not sure when—if it was Friday or Saturday or even on the way to the hospital—but Jehovah Rapha came to my mind, and I didn't even know what that meant until I looked it up this morning. :D
-'Jehovah Rapha (or Rophe) means "The Lord who Heals" or "The God who Heals," combining the Hebrew names "Jehovah" (The Existing One/Lord) and "Rapha" (to mend, repair, or restore). It signifies God's power to provide wholeness, not just physically, but also emotionally, mentally, and spiritually, fixing brokenness and making things whole, a concept fulfilled in Jesus Christ, the Great Physician.'
-It has been an eventful month 🤭🤭🤭. On Sunday, Nov 23 I thought I had a kidney stone that was passing. I decided to wait it out since I have had one in the past, 2016. However, by Tuesday I wasn't getting any better and my sister-in-law called me as I was leaving a health service facility. (I was checking on my Medi-Cal application since I have been unemployed for some time now 😭) I was debating about going to the emergency room or going back home and sleeping, but my sister-in-law insisted I go to the ER and had my brother come pick me up. Kyle came and we were at urgent care around 1p and by 3pm, after a CT, we found out my appendix had ruptured. At 5 or so, I was admitted to a hospital. Wednesday, around 1p I had a drain bag attached to me to get the pus and other stuff to flow out of me instead of having it drain inside my body. I stayed another full day (Thursday). Friday, the drain was still pretty empty so they decided to remove it, discharge me, and send me home with antibiotics. (Dude, watch out for those drain bags when they pull them out!! They can be 🌶🌶🌶) They told me the general surgeon would call within a couple of days to see how I was doing to discuss the next action. However, no one from the hospital called me or did a follow-up. I could tell I was getting worse because each night I had more pain (7th, 8th, & 9th). So I called them on Dec 10th to make an appt and had scheduled it for the following day, the 11th (Thur). However, my mom wasn't able to take me so we rescheduled for Monday the 15th. On Thursday, I decided to fast and stick with liquids to see if that would help my stomach and intestines. I was doing great until I drank a Mango Madness and ate 1/2 an orange. (Lay off the thick drinks folks!!! Stick with clear fluids when u have appendix issues.) Within 1/2 an hour I was on the toilet letting it all flow out and my strength left me. I could feel the darkness overcoming me and I thought for sure I was going to faint. I was able to wobble my way to the sink where I threw up my entire life. Good times!!🤪 I am so lucky I had my cell phone next to me. Unfortunately, it is only used for wifi, no sim, but I was able to msg my family to let them know i needed to go to the hospital asap. My brother picked me up and we went to the closest ER in the area. We were less than 0.5 miles away when the SUV broke down. (This car has NEVER broken down, it is reliable, never had issues!! 😈) But God was watching out for me and compelled a beautiful soul to do a u-turn to help us out. She actually said she had this feeling/urge to come over and help us... something along those lines. (May the God of Abraham, Isaac, and Jacob bless her richly!!!) She took me to the hospital and went back to help my brother. My parents met up with me at the ER hospital and told me that 3 other people came to the help of my brother. One was a mechanic that told my brother what part needed to be replaced. I don't know who the 3rd person was but the 4th person was someone who was a little buzzed. 😂😂😂 I thought that was pretty funny that even a person under the influence tried to help us. 🙌 I had another CT scan and the Dr said that the bacteria had formed around the hole of the appendix and that I had to go back to the hospital. 😐 So around 2am Friday, I arrived at a different hospital. Had a CT scan at 5pm and that Dr recommended another drain bag 😫. Saturday morning, I think, they attached one on me. Sunday, another CT scan was done, the bacteria was gone and they removed the bag after giving me [nanic? i'll fix this post later w/ correct name]. By 4:30? I was discharged and now I have IV meds through a midline that I am to have once a day 🤗. In a month or two, my appendix will be removed 🥳🥳🥳🥳🥳🥳.
-I do have prayer requests: There is an older gentleman I met at the ER rm before going to the hospital, please pray for him and his son who drove him there. There were 3 different patients that roomed w/ me while at the hospital: one w/ a gallbladder issue, another one with appendix, and the third with hip pain. Please pray for them. Also, one of the transports has two kids in their teens who live with their mom that isn't a Christian. They stopped going to church a couple of years ago and seem to not believe in Jesus as The Messiah.
-I want to especially thank all the prayer warriors who are aware of my situation and The Baptist deacon/pastor who spoke with my parents, that he would pray for me: Much love, that really was a comfort to hear that. 🥰💞   </p>  
+                    'Jehovah Rapha (or Rophe) means "The Lord who Heals" or "The God who Heals," combining the Hebrew names "Jehovah" (The Existing One/Lord) and "Rapha" (to mend, repair, or restore). It signifies God's power to provide wholeness, not just physically, but also emotionally, mentally, and spiritually, fixing brokenness and making things whole, a concept fulfilled in Jesus Christ, the Great Physician.'
+                    It has been an eventful month 🤭🤭🤭. On Sunday, Nov 23 I thought I had a kidney stone that was passing. I decided to wait it out since I have had one in the past, 2016. However, by Tuesday I wasn't getting any better and my sister-in-law called me as I was leaving a health service facility. (I was checking on my Medi-Cal application since I have been unemployed for some time now 😭) I was debating about going to the emergency room or going back home and sleeping, but my sister-in-law insisted I go to the ER and had my brother come pick me up. Kyle came and we were at urgent care around 1p and by 3pm, after a CT, we found out my appendix had ruptured. At 5 or so, I was admitted to a hospital. Wednesday, around 1p I had a drain bag attached to me to get the pus and other stuff to flow out of me instead of having it drain inside my body. I stayed another full day (Thursday). Friday, the drain was still pretty empty so they decided to remove it, discharge me, and send me home with antibiotics. (Dude, watch out for those drain bags when they pull them out!! They can be 🌶🌶🌶) They told me the general surgeon would call within a couple of days to see how I was doing to discuss the next action. However, no one from the hospital called me or did a follow-up. I could tell I was getting worse because each night I had more pain (7th, 8th, & 9th). So I called them on Dec 10th to make an appt and had scheduled it for the following day, the 11th (Thur). However, my mom wasn't able to take me so we rescheduled for Monday the 15th. On Thursday, I decided to fast and stick with liquids to see if that would help my stomach and intestines. I was doing great until I drank a Mango Madness and ate 1/2 an orange. (Lay off the thick drinks folks!!! Stick with clear fluids when u have appendix issues.) Within 1/2 an hour I was on the toilet letting it all flow out and my strength left me. I could feel the darkness overcoming me and I thought for sure I was going to faint. I was able to wobble my way to the sink where I threw up my entire life. Good times!!🤪 I am so lucky I had my cell phone next to me. Unfortunately, it is only used for wifi, no sim, but I was able to msg my family to let them know i needed to go to the hospital asap. My brother picked me up and we went to the closest ER in the area. We were less than 0.5 miles away when the SUV broke down. (This car has NEVER broken down, it is reliable, never had issues!! 😈) But God was watching out for me and compelled a beautiful soul to do a u-turn to help us out. She actually said she had this feeling/urge to come over and help us... something along those lines. (May the God of Abraham, Isaac, and Jacob bless her richly!!!) She took me to the hospital and went back to help my brother. My parents met up with me at the ER hospital and told me that 3 other people came to the help of my brother. One was a mechanic that told my brother what part needed to be replaced. I don't know who the 3rd person was but the 4th person was someone who was a little buzzed. 😂😂😂 I thought that was pretty funny that even a person under the influence tried to help us. 🙌 I had another CT scan and the Dr said that the bacteria had formed around the hole of the appendix and that I had to go back to the hospital. 😐 So around 2am Friday, I arrived at a different hospital. Had a CT scan at 5pm and that Dr recommended another drain bag 😫. Saturday morning, I think, they attached one on me. Sunday, another CT scan was done, the bacteria was gone and they removed the bag after giving me [nanic? i'll fix this post later w/ correct name]. By 4:30? I was discharged and now I have IV meds through a midline that I am to have once a day 🤗. In a month or two, my appendix will be removed 🥳🥳🥳🥳🥳🥳.
+                    I do have prayer requests: There is an older gentleman I met at the ER rm before going to the hospital, please pray for him and his son who drove him there. There were 3 different patients that roomed w/ me while at the hospital: one w/ a gallbladder issue, another one with appendix, and the third with hip pain. Please pray for them. Also, one of the transports has two kids in their teens who live with their mom that isn't a Christian. They stopped going to church a couple of years ago and seem to not believe in Jesus as The Messiah.
+                    I want to especially thank all the prayer warriors who are aware of my situation and The Baptist deacon/pastor who spoke with my parents, that he would pray for me: Much love, that really was a comfort to hear that. 🥰💞 </p>
                 <div style="text-align:center; margin:15px 0; overflow:hidden;">
-                <img src="jehovah-rapha.jpg" width="350" height="auto" alt="The God who Heals" style="max-width:100%; height:auto; display:inline-block;">
+                    <img src="jehovah-rapha.jpg" width="350" height="auto" alt="The God who Heals" style="max-width:100%; height:auto; display:inline-block;">
+                </div>
             </div>
         </div>
-            </div>
-            <div class="blog-post" id="post-21">
-                <h3>dream - December 14, 2025</h3>
-                <p> 
-                   I had a pretty cool dream this morning. It was very brief. It was a completely black background with no light, and then brilliant white Hebrew letters started appearing, as if someone was writing them, but there weren't any hands or anything. And someone—a man—was teaching me how to pronounce the words and was speaking to me in Hebrew. I was in the spirit, watching and listening, and suddenly cracked a joke within myself: "The Jew haters are going to lose their mind if this is going to be taught to everyone." And then I was taken out of that dream and woke up. I thought that was pretty cool. Words I haven't learned yet.
-                </p>
-            </div>
-            <div class="blog-post" id="post-20">
-                <h3>dream - November 23, 2025</h3>
-                <p> 
-                   I had a dream that I was holding a hand grenade in my right hand and somehow it was activated. I don't know if it malfunctioned or if I accidentally set it off, but I was in a panic trying to figure out how to deactivate it. [I was switching between 1st person and 3rd person.] I could see myself going through the house trying to find a place where I could put it to minimize the explosion, and as I went back outside to the garage, there was Storm lying down on the garage floor passively watching me, no concern. Her head was up staring at me and I was so surprised to see her, but since I still had the grenade in my hand, I couldn't visit with her. (By this time the grenade had morphed into some odd structure.) There was this steel little box by the front door steps that I put the explosive device in. However, when it went off, the thing imploded on itself and then I woke up with really bad pain on my right side of my lower body. It felt like a kidney stone that was stuck.
-                </p>
-            </div>
+        <div class="blog-post" id="post-21">
+            <h3>dream - December 14, 2025</h3>
+            <p>
+                I had a pretty cool dream this morning. It was very brief. It was a completely black background with no light, and then brilliant white Hebrew letters started appearing, as if someone was writing them, but there weren't any hands or anything. And someone—a man—was teaching me how to pronounce the words and was speaking to me in Hebrew. I was in the spirit, watching and listening, and suddenly cracked a joke within myself: "The Jew haters are going to lose their mind if this is going to be taught to everyone." And then I was taken out of that dream and woke up. I thought that was pretty cool. Words I haven't learned yet.
+            </p>
+        </div>
+        <div class="blog-post" id="post-20">
+            <h3>dream - November 23, 2025</h3>
+            <p>
+                I had a dream that I was holding a hand grenade in my right hand and somehow it was activated. I don't know if it malfunctioned or if I accidentally set it off, but I was in a panic trying to figure out how to deactivate it. [I was switching between 1st person and 3rd person.] I could see myself going through the house trying to find a place where I could put it to minimize the explosion, and as I went back outside to the garage, there was Storm lying down on the garage floor passively watching me, no concern. Her head was up staring at me and I was so surprised to see her, but since I still had the grenade in my hand, I couldn't visit with her. (By this time the grenade had morphed into some odd structure.) There was this steel little box by the front door steps that I put the explosive device in. However, when it went off, the thing imploded on itself and then I woke up with really bad pain on my right side of my lower body. It felt like a kidney stone that was stuck.
+            </p>
+        </div>
 
-            <div class="blog-post" id="post-10">
-                <h3>dream - 2020-21?</h3>
-                <p> 
-                I had a dream that I was at a park with other Christians. It was an organized event, but I don't know why we were there or the purpose of the event. (I never saw any microphones, stage, or speaking area.) I'm not sure if it was a church-organized event or if it was a Christian-affiliated event. I don't recall seeing myself socializing with anyone at the event. [My dream kept switching from 1st to 3rd person.] The people were in groups on the grass. Some were standing and others sitting. I walked a little distance away from everyone to be on my own, and a man came up to me (3rd person viewing). When he started speaking to me, my dream shifted to a 1st person viewing. Now, somehow I knew that Hibbs was one of the leaders of this event, or maybe the main figure of the event? I'm not sure how I knew that, since I don't recall seeing him in my dream, but I somehow knew he was there and that I was there as his support. (Which is very strange since I don't know the man.) [The man that came up to me, I didn't know him personally, but I somehow knew he was part of the event. I don't know in what capacity he fulfilled the role there, but he was someone that was friends with Hibbs and the organizers. He was someone that people trusted and respected.] So this guy in my dream—he was a white male, about 5'10" and medium built—and he was trying to convince me to usurp Hibbs and to promote him. I honestly can't remember the words that were said by him, but I became angry and started yelling at the guy. At some point I raised my right hand (point of view switched to 3rd person) and index finger to heaven and told him he was going to have the wrath of God upon him if he didn't repent (something along those lines). As I was yelling at him and stepping towards him (I kid you not), lightning from Heaven came down and electrocuted that guy, and then I woke up.   
+        <div class="blog-post" id="post-10">
+            <h3>dream - 2020-21?</h3>
+            <p>
+                I had a dream that I was at a park with other Christians. It was an organized event, but I don't know why we were there or the purpose of the event. (I never saw any microphones, stage, or speaking area.) I'm not sure if it was a church-organized event or if it was a Christian-affiliated event. I don't recall seeing myself socializing with anyone at the event. [My dream kept switching from 1st to 3rd person.] The people were in groups on the grass. Some were standing and others sitting. I walked a little distance away from everyone to be on my own, and a man came up to me (3rd person viewing). When he started speaking to me, my dream shifted to a 1st person viewing. Now, somehow I knew that Hibbs was one of the leaders of this event, or maybe the main figure of the event? I'm not sure how I knew that, since I don't recall seeing him in my dream, but I somehow knew he was there and that I was there as his support. (Which is very strange since I don't know the man.) [The man that came up to me, I didn't know him personally, but I somehow knew he was part of the event. I don't know in what capacity he fulfilled the role there, but he was someone that was friends with Hibbs and the organizers. He was someone that people trusted and respected.] So this guy in my dream—he was a white male, about 5'10" and medium built—and he was trying to convince me to usurp Hibbs and to promote him. I honestly can't remember the words that were said by him, but I became angry and started yelling at the guy. At some point I raised my right hand (point of view switched to 3rd person) and index finger to heaven and told him he was going to have the wrath of God upon him if he didn't repent (something along those lines). As I was yelling at him and stepping towards him (I kid you not), lightning from Heaven came down and electrocuted that guy, and then I woke up.
 
-                    
-                </p>
-            </div>
+
+            </p>
+        </div>
 
         <div class="blog-post" id="post-09">
-                <h3>dream - 2020</h3>
-                <p> I had this dream that I was on a street corner next to a fire hydrant. It reminded me of the gas station where I used to live, by Lakewood, but honestly, it could have been at any corner. I don't know why I was there, but I was standing next to the fire hydrant and it broke. The water was somehow being funneled into an invisible container, which I was inside (but I didn't know I was inside of it). The water quickly rose past my knees, filling up the invisible container, but I couldn't get out of the invisible container. As the container filled, I was completely submerged in water, and the scene shifted to me being in a lake or ocean—more lake than ocean—and no longer in an invisible container. [The dream shifted to 1st person.] I was sinking in the water and I could see the sunlight above the water, so I stuck my hand up hoping someone would see it and grab it, while sinking. (side note, for some reason, I couldn't swim - I didn't even try.) And I saw a hand come through the water and grab my hand. It seemed as if it was the hand of God, but as I was taken out of the water, the hand changed and I saw the smile of Greg Laurie. Then I woke up.
-I've always wondered about this dream because I can't imagine it ever coming true. 
-                </p>
+            <h3>dream - 2020</h3>
+            <p> I had this dream that I was on a street corner next to a fire hydrant. It reminded me of the gas station where I used to live, by Lakewood, but honestly, it could have been at any corner. I don't know why I was there, but I was standing next to the fire hydrant and it broke. The water was somehow being funneled into an invisible container, which I was inside (but I didn't know I was inside of it). The water quickly rose past my knees, filling up the invisible container, but I couldn't get out of the invisible container. As the container filled, I was completely submerged in water, and the scene shifted to me being in a lake or ocean—more lake than ocean—and no longer in an invisible container. [The dream shifted to 1st person.] I was sinking in the water and I could see the sunlight above the water, so I stuck my hand up hoping someone would see it and grab it, while sinking. (side note, for some reason, I couldn't swim - I didn't even try.) And I saw a hand come through the water and grab my hand. It seemed as if it was the hand of God, but as I was taken out of the water, the hand changed and I saw the smile of Greg Laurie. Then I woke up.
+                I've always wondered about this dream because I can't imagine it ever coming true.
+            </p>
         </div>
 
         <div class="blog-post" id="post-08">
-                <h3> Story Time! - 2018/2019?</h3>
-                <p> These events actually happened to me. 
-                    <li>
-                        <ul>The sun was beginning to set when I took the metro home. When I exited the train, the sun was barely visible. As I walked to my car, I passed under street lights. Each light that I walked under turned off, then turned back on. At first, I didn't think much of it, and then I thought it was odd—what a coincidence. But the second time it happened, I looked back at the other light to see if the bulb was going out, but it didn't even flicker. As I kept walking, the street lights kept turning off. It was starting to scare me. What was causing that?? Heck if I know. Maybe demonic, maybe not? This would happen at times when I drove my car on the freeway too, but that I could see as more coincidence. Like, maybe I was more acutely aware that it was happening, so maybe I mentally documented the times it did happen, while ignoring the times it didn't.  </ul>
-                       <ul>
-                         I was volunteering (through church) my time at a military base. As I was driving back on the freeway, I was in the second-to-fastest lane and I saw a bright yellow Hummer on the other side of the freeway. Slowly, the Hummer started swaying, and this thought immediately came to me—it is going to hit me. So, I was debating whether I should speed up or slow down, but then I realized it didn't matter which I did; the car was going to come at me. (By the way, this wouldn't have been a normal thought. The car was in the second-slowest lane, it seemed really far away, and it wasn't a noticeable swaying at first.) Then the Hummer started swerving, oscillating in its lanes to the right and left but making its way toward the northbound traffic. That Hummer smashed 2 feet in front of my car into the median—thank God for those concrete blocks!! 
-                       </ul> 
-                        <ul>
-                         I was walking southbound from the train station when an older gentleman was riding his bike toward me on the sidewalk. This dude on a skateboard came up behind me, and the older guy dumped himself and his bike into the bushes to avoid the skateboarder. He was pissed and started yelling, and I was there just in time to help him and his bike out of the bush. I smiled at him and said something—I can't remember what—but he looked into my eyes, and I saw something glow in his eyes. He smiled back at me and rode off. That was the first time I saw it, but I have seen it in other people's eyes since then. 
-                        </ul>
-                        <ul>
-                       After work, I decided to go visit a homeless guy I had talked to previously. I think his name was Jeff? He was an older guy, in his 60s, very thin, and an alcoholic. The first time I visited him, I brought him food and he couldn't believe it. He told me that for the past couple of days he wasn't able to get food and he was really stressed about it and worried about what he was going to do. He had tears of joy and unbelief when he said, "and then today someone had a party and extra food and gave me the platter and now you have also come." And when he said that, I couldn't help but think about the scripture: "Look at the birds of the air, that they do not sow, nor reap nor gather into barns, and yet your heavenly Father feeds them. Are you not worth much more than they?" Matthew 6:26<br>
-Anyhoot, by this time I felt that me coming around wasn't helping but enabling his behavior. So I decided to focus on his drinking and how God could resolve that issue if he submitted to His will. I could tell he was getting agitated and finally said, "Okay, I'll stop tomorrow." And I said, why not start today? We went back and forth for a bit and then he got off the store wall and came toward me to hit me, but as he got closer, it was as if he hit an invisible wall. It was like he wanted to go forward but couldn't. He stopped and turned back around and demeanor changed back to being friendly again. He asked me if I would come tomorrow to visit and said that if I didn't come back, he would never come back to that location again. I said maybe, but I never went back. There were times when I would drive back there to see if he was there, but I never saw him after that day.
-                        </ul>
-                        
-                    </li>
-                    
-                </p>
+            <h3> Story Time! - 2018/2019?</h3>
+            <p> These events actually happened to me.</p>
+            <ul>
+                <li>The sun was beginning to set when I took the metro home. When I exited the train, the sun was barely visible. As I walked to my car, I passed under street lights. Each light that I walked under turned off, then turned back on. At first, I didn't think much of it, and then I thought it was odd—what a coincidence. But the second time it happened, I looked back at the other light to see if the bulb was going out, but it didn't even flicker. As I kept walking, the street lights kept turning off. It was starting to scare me. What was causing that?? Heck if I know. Maybe demonic, maybe not? This would happen at times when I drove my car on the freeway too, but that I could see as more coincidence. Like, maybe I was more acutely aware that it was happening, so maybe I mentally documented the times it did happen, while ignoring the times it didn't. </li>
+                <li>
+                    I was volunteering (through church) my time at a military base. As I was driving back on the freeway, I was in the second-to-fastest lane and I saw a bright yellow Hummer on the other side of the freeway. Slowly, the Hummer started swaying, and this thought immediately came to me—it is going to hit me. So, I was debating whether I should speed up or slow down, but then I realized it didn't matter which I did; the car was going to come at me. (By the way, this wouldn't have been a normal thought. The car was in the second-slowest lane, it seemed really far away, and it wasn't a noticeable swaying at first.) Then the Hummer started swerving, oscillating in its lanes to the right and left but making its way toward the northbound traffic. That Hummer smashed 2 feet in front of my car into the median—thank God for those concrete blocks!!
+                </li>
+                <li>
+                    I was walking southbound from the train station when an older gentleman was riding his bike toward me on the sidewalk. This dude on a skateboard came up behind me, and the older guy dumped himself and his bike into the bushes to avoid the skateboarder. He was pissed and started yelling, and I was there just in time to help him and his bike out of the bush. I smiled at him and said something—I can't remember what—but he looked into my eyes, and I saw something glow in his eyes. He smiled back at me and rode off. That was the first time I saw it, but I have seen it in other people's eyes since then.
+                </li>
+                <li>
+                    After work, I decided to go visit a homeless guy I had talked to previously. I think his name was Jeff? He was an older guy, in his 60s, very thin, and an alcoholic. The first time I visited him, I brought him food and he couldn't believe it. He told me that for the past couple of days he wasn't able to get food and he was really stressed about it and worried about what he was going to do. He had tears of joy and unbelief when he said, "and then today someone had a party and extra food and gave me the platter and now you have also come." And when he said that, I couldn't help but think about the scripture: "Look at the birds of the air, that they do not sow, nor reap nor gather into barns, and yet your heavenly Father feeds them. Are you not worth much more than they?" Matthew 6:26
+                    Anyhoot, by this time I felt that me coming around wasn't helping but enabling his behavior. So I decided to focus on his drinking and how God could resolve that issue if he submitted to His will. I could tell he was getting agitated and finally said, "Okay, I'll stop tomorrow." And I said, why not start today? We went back and forth for a bit and then he got off the store wall and came toward me to hit me, but as he got closer, it was as if he hit an invisible wall. It was like he wanted to go forward but couldn't. He stopped and turned back around and demeanor changed back to being friendly again. He asked me if I would come tomorrow to visit and said that if I didn't come back, he would never come back to that location again. I said maybe, but I never went back. There were times when I would drive back there to see if he was there, but I never saw him after that day.
+                </li>
+
+            </ul>
+
+
         </div>
-        
+
 
 
         <footer>
-            <p>[If the LORD delights in us, HE will bring us into this land and give it to us, a land that flows with milk and honey. Only do not rebel against the LORD. And do not fear the people of the land, for they are bread for us. Their protection is removed from them, and the LORD is with us; do not fear them."  (Numbers 14(8-9), ESV)] Jeremiah 12 </p>
+            <p>If the LORD delights in us, HE will bring us into this land and give it to us, a land that flows with milk and honey. Only do not rebel against the LORD. And do not fear the people of the land, for they are bread for us. Their protection is removed from them, and the LORD is with us; do not fear them." (Numbers 14(8-9), ESV)] Jeremiah 12 </p>
         </footer>
-        </div>
-  
-
     </div>
+
 
     <button id="backToTop" title="Back to Top">✞</button>
 
@@ -190,7 +187,7 @@ Anyhoot, by this time I felt that me coming around wasn't helping but enabling h
             if (calendarEl) {
                 calendar = new FullCalendar.Calendar(calendarEl, {
                     initialView: 'dayGridMonth',
-                    initialDate: '20206-02-16',
+                    initialDate: '2026-02-16',
                     editable: false,
                     selectable: false,
                     headerToolbar: {
@@ -215,17 +212,17 @@ Anyhoot, by this time I felt that me coming around wasn't helping but enabling h
                         {
                             start: '2020-01-01',
                             url: '#post-10',
-                            emojis: ['😴','','']
+                            emojis: ['😴', '', '']
                         },
                         {
                             start: '2020-01-01',
                             url: '#post-09',
-                            emojis: ['😴','','']
+                            emojis: ['😴', '', '']
                         },
-                                                     {
+                        {
                             start: '2019-01-01',
                             url: '#post-08',
-                            emojis: ['📝','💡','']
+                            emojis: ['📝', '💡', '']
                         },
                     ],
                     eventContent: function(arg) {
@@ -251,8 +248,8 @@ Anyhoot, by this time I felt that me coming around wasn't helping but enabling h
             var monthSelect = document.getElementById('month-select');
             var yearSelect = document.getElementById('year-select');
             if (monthSelect && yearSelect) {
-                monthSelect.value = '7';
-                yearSelect.value = '2025';
+                monthSelect.value = '1';
+                yearSelect.value = '2026';
                 monthSelect.addEventListener('change', updateCalendar);
                 yearSelect.addEventListener('change', updateCalendar);
 
